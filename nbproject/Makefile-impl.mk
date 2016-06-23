@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=dimmer-phasecut-pic
+PROJECTNAME=phase_cont_dimmer.X
 
 # Active Configuration
 DEFAULTCONF=default

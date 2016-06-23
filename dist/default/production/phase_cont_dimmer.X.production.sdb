@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 16F1614 ]
 [d frameptr 6 ]
-"89 /home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/tmr2.c
+"88 /home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/tmr2.c
 [e E10771 . `uc
 TMR2_ROP_STARTS_TMRON 0
 TMR2_ROP_STARTS_TMRON_ERSHIGH 1
@@ -27,7 +27,7 @@ TMR2_MS_STARTS_TMRON_ERSRISINGEDGEDETECT 17
 TMR2_MS_STARTS_TMRON_ERSFALLINGEDGEDETECT 18
 TMR2_MS_STARTS_TMRON_ERSBOTHEDGE 19
 ]
-"95
+"94
 [e E10794 . `uc
 TMR2_T2IN 0
 TMR2_C1_OUT_SYNC 1
@@ -43,117 +43,44 @@ TMR2_LC2_OUT 10
 TMR2_PWM3_OUT 13
 TMR2_PWM4_OUT 14
 ]
-"89 /home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/tmr4.c
-[e E10771 . `uc
-TMR4_ROP_STARTS_TMRON 0
-TMR4_ROP_STARTS_TMRON_ERSHIGH 1
-TMR4_ROP_STARTS_TMRON_ERSLOW 2
-TMR4_ROP_RESETS_ERSBOTHEDGE 3
-TMR4_ROP_RESETS_ERSRISINGEDGE 4
-TMR4_ROP_RESETS_ERSFALLINGEDGE 5
-TMR4_ROP_RESETS_ERSLOW 6
-TMR4_ROP_RESETS_ERSHIGH 7
-TMR4_OS_STARTS_TMRON 8
-TMR4_OS_STARTS_ERSRISINGEDGE 9
-TMR4_OS_STARTS_ERSFALLINGEDGE 10
-TMR4_OS_STARTS_ERSBOTHEDGE 11
-TMR4_OS_STARTS_ERSFIRSTRISINGEDGE 12
-TMR4_OS_STARTS_ERSFIRSTFALLINGEDGE 13
-TMR4_OS_STARTS_ERSRISINGEDGEDETECT 14
-TMR4_OS_STARTS_ERSFALLINGEDGEDETECT 15
-TMR4_OS_STARTS_TMRON_ERSHIGH 22
-TMR4_OS_STARTS_TMRON_ERSLOW 23
-TMR4_MS_STARTS_TMRON_ERSRISINGEDGEDETECT 17
-TMR4_MS_STARTS_TMRON_ERSFALLINGEDGEDETECT 18
-TMR4_MS_STARTS_TMRON_ERSBOTHEDGE 19
-]
-"95
-[e E10794 . `uc
-TMR4_T4IN 0
-TMR4_C1_OUT_SYNC 1
-TMR4_C2_OUT_SYNC 2
-TMR4_CCP1_OUT 3
-TMR4_CCP2_OUT 4
-TMR4_T2POSTSCALED 5
-TMR4_RESERVED 6
-TMR4_T6POSTSCALED 7
-TMR4_ZCD1_OUTPUT 8
-TMR4_LC1_OUT 9
-TMR4_LC2_OUT 10
-TMR4_PWM3_OUT 13
-TMR4_PWM4_OUT 14
-]
 "62 /opt/microchip/xc8/v1.36/sources/common/float.c
 [v ___ftpack __ftpack `(f  1 e 3 0 ]
 "86 /opt/microchip/xc8/v1.36/sources/common/ftadd.c
 [v ___ftadd __ftadd `(f  1 e 3 0 ]
 "52 /home/mer/MPLABXProjects/phase_cont_dimmer.X/main.c
 [v _main main `(v  1 e 1 0 ]
-"75 /home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/mcc.c
+"74 /home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
-"88
+"86
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 "50 /home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
-"58 /home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm3.c
+"57 /home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm3.c
 [v _PWM3_Initialize PWM3_Initialize `(v  1 e 1 0 ]
-"75
+"74
 [v _PWM3_LoadDutyValue PWM3_LoadDutyValue `(v  1 e 1 0 ]
-"58 /home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm4.c
+"57 /home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm4.c
 [v _PWM4_Initialize PWM4_Initialize `(v  1 e 1 0 ]
-"75
+"74
 [v _PWM4_LoadDutyValue PWM4_LoadDutyValue `(v  1 e 1 0 ]
 "64 /home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
 [v _SPI_Initialize SPI_Initialize `(v  1 e 1 0 ]
-"78
+"80
 [v _SPI_Exchange8bit SPI_Exchange8bit `(uc  1 e 1 0 ]
-"148
-[v _SPI_HasReceiveOverflowOccured SPI_HasReceiveOverflowOccured `(uc  1 e 1 0 ]
-"153
-[v _SPI_ClearReceiveOverflowStatus SPI_ClearReceiveOverflowStatus `(v  1 e 1 0 ]
-"59 /home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/tmr2.c
+"58 /home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/tmr2.c
 [v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
-"100
+"99
 [v _TMR2_Start TMR2_Start `(v  1 e 1 0 ]
-"111
+"110
 [v _TMR2_Stop TMR2_Stop `(v  1 e 1 0 ]
-"122
+"121
 [v _TMR2_Counter8BitGet TMR2_Counter8BitGet `(uc  1 e 1 0 ]
-"136
+"135
 [v _TMR2_Counter8BitSet TMR2_Counter8BitSet `(v  1 e 1 0 ]
-"147
+"146
 [v _TMR2_Period8BitSet TMR2_Period8BitSet `(v  1 e 1 0 ]
-"59 /home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/tmr4.c
-[v _TMR4_Initialize TMR4_Initialize `(v  1 e 1 0 ]
-"100
-[v _TMR4_Start TMR4_Start `(v  1 e 1 0 ]
-"111
-[v _TMR4_Stop TMR4_Stop `(v  1 e 1 0 ]
-"122
-[v _TMR4_Counter8BitGet TMR4_Counter8BitGet `(uc  1 e 1 0 ]
-"136
-[v _TMR4_Counter8BitSet TMR4_Counter8BitSet `(v  1 e 1 0 ]
-"147
-[v _TMR4_Period8BitSet TMR4_Period8BitSet `(v  1 e 1 0 ]
-"58 /home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/zcd.c
+"57 /home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/zcd.c
 [v _ZCD_Initialize ZCD_Initialize `(v  1 e 1 0 ]
-[s S416 . 1 `uc 1 IOCIF 1 0 :1:0 
-`uc 1 INTF 1 0 :1:1 
-`uc 1 TMR0IF 1 0 :1:2 
-`uc 1 IOCIE 1 0 :1:3 
-`uc 1 INTE 1 0 :1:4 
-`uc 1 TMR0IE 1 0 :1:5 
-`uc 1 PEIE 1 0 :1:6 
-`uc 1 GIE 1 0 :1:7 
-]
-"360 /opt/microchip/xc8/v1.36/include/pic16f1614.h
-[s S425 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 T0IF 1 0 :1:2 
-`uc 1 . 1 0 :2:3 
-`uc 1 T0IE 1 0 :1:5 
-]
-[u S430 . 1 `S416 1 . 1 0 `S425 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES430  1 e 1 @11 ]
 [s S96 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
@@ -163,20 +90,9 @@ TMR4_PWM4_OUT 14
 `uc 1 ADIF 1 0 :1:6 
 `uc 1 TMR1GIF 1 0 :1:7 
 ]
-"529
+"529 /opt/microchip/xc8/v1.36/include/pic16f1614.h
 [u S105 . 1 `S96 1 . 1 0 ]
 [v _PIR1bits PIR1bits `VES105  1 e 1 @16 ]
-[s S515 . 1 `uc 1 CCP2IF 1 0 :1:0 
-`uc 1 TMR4IF 1 0 :1:1 
-`uc 1 TMR6IF 1 0 :1:2 
-`uc 1 BCL1IF 1 0 :1:3 
-`uc 1 . 1 0 :1:4 
-`uc 1 C1IF 1 0 :1:5 
-`uc 1 C2IF 1 0 :1:6 
-]
-"589
-[u S523 . 1 `S515 1 . 1 0 ]
-[v _PIR2bits PIR2bits `VES523  1 e 1 @17 ]
 "976
 [v _T2TMR T2TMR `VEuc  1 e 1 @26 ]
 "981
@@ -267,7 +183,7 @@ TMR4_PWM4_OUT 14
 [v _TRISA TRISA `VEuc  1 e 1 @140 ]
 "1561
 [v _TRISC TRISC `VEuc  1 e 1 @142 ]
-[s S384 . 1 `uc 1 PS 1 0 :3:0 
+[s S380 . 1 `uc 1 PS 1 0 :3:0 
 `uc 1 PSA 1 0 :1:3 
 `uc 1 TMR0SE 1 0 :1:4 
 `uc 1 TMR0CS 1 0 :1:5 
@@ -275,15 +191,15 @@ TMR4_PWM4_OUT 14
 `uc 1 nWPUEN 1 0 :1:7 
 ]
 "1899
-[s S391 . 1 `uc 1 PS0 1 0 :1:0 
+[s S387 . 1 `uc 1 PS0 1 0 :1:0 
 `uc 1 PS1 1 0 :1:1 
 `uc 1 PS2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
 `uc 1 T0SE 1 0 :1:4 
 `uc 1 T0CS 1 0 :1:5 
 ]
-[u S398 . 1 `S384 1 . 1 0 `S391 1 . 1 0 ]
-[v _OPTION_REGbits OPTION_REGbits `VES398  1 e 1 @149 ]
+[u S394 . 1 `S380 1 . 1 0 `S387 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES394  1 e 1 @149 ]
 "2019
 [v _OSCTUNE OSCTUNE `VEuc  1 e 1 @152 ]
 "2076
@@ -317,7 +233,7 @@ TMR4_PWM4_OUT 14
 [v _SSPBUF SSPBUF `VEuc  1 e 1 @529 ]
 "5065
 [v _SSP1STAT SSP1STAT `VEuc  1 e 1 @532 ]
-[s S792 . 1 `uc 1 BF 1 0 :1:0 
+[s S493 . 1 `uc 1 BF 1 0 :1:0 
 `uc 1 UA 1 0 :1:1 
 `uc 1 R_nW 1 0 :1:2 
 `uc 1 S 1 0 :1:3 
@@ -327,24 +243,24 @@ TMR4_PWM4_OUT 14
 `uc 1 SMP 1 0 :1:7 
 ]
 "5087
-[u S801 . 1 `S792 1 . 1 0 ]
-[v _SSP1STATbits SSP1STATbits `VES801  1 e 1 @532 ]
+[u S502 . 1 `S493 1 . 1 0 ]
+[v _SSP1STATbits SSP1STATbits `VES502  1 e 1 @532 ]
 "5186
 [v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @533 ]
-[s S766 . 1 `uc 1 SSPM 1 0 :4:0 
+[s S467 . 1 `uc 1 SSPM 1 0 :4:0 
 `uc 1 CKP 1 0 :1:4 
 `uc 1 SSPEN 1 0 :1:5 
 `uc 1 SSPOV 1 0 :1:6 
 `uc 1 WCOL 1 0 :1:7 
 ]
 "5219
-[s S772 . 1 `uc 1 SSPM0 1 0 :1:0 
+[s S473 . 1 `uc 1 SSPM0 1 0 :1:0 
 `uc 1 SSPM1 1 0 :1:1 
 `uc 1 SSPM2 1 0 :1:2 
 `uc 1 SSPM3 1 0 :1:3 
 ]
-[u S777 . 1 `S766 1 . 1 0 `S772 1 . 1 0 ]
-[v _SSP1CON1bits SSP1CON1bits `VES777  1 e 1 @533 ]
+[u S478 . 1 `S467 1 . 1 0 `S473 1 . 1 0 ]
+[v _SSP1CON1bits SSP1CON1bits `VES478  1 e 1 @533 ]
 "5576
 [v _SSP1CON3 SSP1CON3 `VEuc  1 e 1 @535 ]
 [s S22 . 1 `uc 1 CCP1TSEL 1 0 :2:0 
@@ -364,64 +280,8 @@ TMR4_PWM4_OUT 14
 ]
 [u S36 . 1 `S22 1 . 1 0 `S27 1 . 1 0 ]
 [v _CCPTMRSbits CCPTMRSbits `VES36  1 e 1 @670 ]
-"6842
-[v _HIDRVC HIDRVC `VEuc  1 e 1 @1038 ]
-"6868
-[v _T4TMR T4TMR `VEuc  1 e 1 @1043 ]
-"6873
-[v _TMR4 TMR4 `VEuc  1 e 1 @1043 ]
-"6921
-[v _T4PR T4PR `VEuc  1 e 1 @1044 ]
-"6926
-[v _PR4 PR4 `VEuc  1 e 1 @1044 ]
-"6974
-[v _T4CON T4CON `VEuc  1 e 1 @1045 ]
-"7010
-[s S670 . 1 `uc 1 T4OUTPS 1 0 :4:0 
-`uc 1 T4CKPS 1 0 :3:4 
-`uc 1 T4ON 1 0 :1:7 
-]
-[s S674 . 1 `uc 1 T4OUTPS0 1 0 :1:0 
-`uc 1 T4OUTPS1 1 0 :1:1 
-`uc 1 T4OUTPS2 1 0 :1:2 
-`uc 1 T4OUTPS3 1 0 :1:3 
-`uc 1 T4CKPS0 1 0 :1:4 
-`uc 1 T4CKPS1 1 0 :1:5 
-`uc 1 T4CKPS2 1 0 :1:6 
-`uc 1 TMR4ON 1 0 :1:7 
-]
-[u S683 . 1 `S241 1 . 1 0 `S245 1 . 1 0 `S670 1 . 1 0 `S674 1 . 1 0 ]
-[v _T4CONbits T4CONbits `VES683  1 e 1 @1045 ]
-"7119
-[v _T4HLT T4HLT `VEuc  1 e 1 @1046 ]
-"7152
-[s S571 . 1 `uc 1 T4MODE 1 0 :5:0 
-`uc 1 T4CKSYNC 1 0 :1:5 
-`uc 1 T4CKPOL 1 0 :1:6 
-`uc 1 T4PSYNC 1 0 :1:7 
-]
-[s S576 . 1 `uc 1 T4MODE0 1 0 :1:0 
-`uc 1 T4MODE1 1 0 :1:1 
-`uc 1 T4MODE2 1 0 :1:2 
-`uc 1 T4MODE3 1 0 :1:3 
-`uc 1 T4MODE4 1 0 :1:4 
-]
-[u S582 . 1 `S143 1 . 1 0 `S148 1 . 1 0 `S571 1 . 1 0 `S576 1 . 1 0 ]
-[v _T4HLTbits T4HLTbits `VES582  1 e 1 @1046 ]
-"7246
-[v _T4CLKCON T4CLKCON `VEuc  1 e 1 @1047 ]
-"7325
-[v _T4RST T4RST `VEuc  1 e 1 @1048 ]
-"7350
-[s S631 . 1 `uc 1 T4RSEL 1 0 :4:0 
-]
-[s S633 . 1 `uc 1 T4RSEL0 1 0 :1:0 
-`uc 1 T4RSEL1 1 0 :1:1 
-`uc 1 T4RSEL2 1 0 :1:2 
-`uc 1 T4RSEL3 1 0 :1:3 
-]
-[u S638 . 1 `S207 1 . 1 0 `S209 1 . 1 0 `S631 1 . 1 0 `S633 1 . 1 0 ]
-[v _T4RSTbits T4RSTbits `VES638  1 e 1 @1048 ]
+"6377
+[v _SLRCONC SLRCONC `VEuc  1 e 1 @782 ]
 "11045
 [v _PWM3DCL PWM3DCL `VEuc  1 e 1 @1559 ]
 "11110
@@ -436,136 +296,116 @@ TMR4_PWM4_OUT 14
 [v _PWM4CON PWM4CON `VEuc  1 e 1 @1564 ]
 "20321
 [v _PPSLOCK PPSLOCK `VEuc  1 e 1 @3599 ]
-[s S450 . 1 `uc 1 PPSLOCKED 1 0 :1:0 
+[s S414 . 1 `uc 1 PPSLOCKED 1 0 :1:0 
 ]
 "20331
-[u S452 . 1 `S450 1 . 1 0 ]
-[v _PPSLOCKbits PPSLOCKbits `VES452  1 e 1 @3599 ]
+[u S416 . 1 `S414 1 . 1 0 ]
+[v _PPSLOCKbits PPSLOCKbits `VES416  1 e 1 @3599 ]
 "20684
 [v _T2PPS T2PPS `VEuc  1 e 1 @3608 ]
-"20813
-[v _T4PPS T4PPS `VEuc  1 e 1 @3611 ]
 "21028
 [v _SSPCLKPPS SSPCLKPPS `VEuc  1 e 1 @3616 ]
 "21071
 [v _SSPDATPPS SSPDATPPS `VEuc  1 e 1 @3617 ]
 "21114
 [v _SSPSSPPS SSPSSPPS `VEuc  1 e 1 @3618 ]
-"21802
-[v _RA4PPS RA4PPS `VEuc  1 e 1 @3732 ]
-"21974
-[v _RC2PPS RC2PPS `VEuc  1 e 1 @3746 ]
+"21673
+[v _RA0PPS RA0PPS `VEuc  1 e 1 @3728 ]
 "22060
 [v _RC4PPS RC4PPS `VEuc  1 e 1 @3748 ]
 "22103
 [v _RC5PPS RC5PPS `VEuc  1 e 1 @3749 ]
 "25790
 [v _GIE GIE `VEb  1 e 0 @95 ]
+"25834
+[v _HIDC4 HIDC4 `VEb  1 e 0 @8308 ]
+"25836
+[v _HIDC5 HIDC5 `VEb  1 e 0 @8309 ]
+"4 /home/mer/MPLABXProjects/phase_cont_dimmer.X/cie1931.h
+[v _cie cie `DCC[256]uc  1 e 256 0 ]
 "52 /home/mer/MPLABXProjects/phase_cont_dimmer.X/main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"73
-[v main@data data `uc  1 a 1 10 ]
-"72
-[v main@addr addr `uc  1 a 1 9 ]
-"71
-[v main@readDummy readDummy `uc  1 a 1 8 ]
+"76
+[v main@pwm4 pwm4 `uc  1 a 1 10 ]
 "75
-[v main@pwm4 pwm4 `uc  1 a 1 7 ]
+[v main@pwm3 pwm3 `uc  1 a 1 9 ]
 "74
-[v main@pwm3 pwm3 `uc  1 a 1 6 ]
-"77
-[v main@cie cie `DCC[256]ui  1 s 512 cie ]
-"131
+[v main@data data `uc  1 a 1 8 ]
+"73
+[v main@addr addr `uc  1 a 1 7 ]
+"72
+[v main@readDummy readDummy `uc  1 a 1 6 ]
+"95
 } 0
-"75 /home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/mcc.c
+"74 /home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
-"86
+"84
 } 0
-"58 /home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/zcd.c
+"57 /home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/zcd.c
 [v _ZCD_Initialize ZCD_Initialize `(v  1 e 1 0 ]
 {
-"64
+"63
 } 0
-"59 /home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/tmr4.c
-[v _TMR4_Initialize TMR4_Initialize `(v  1 e 1 0 ]
-{
-"86
-} 0
-"100
-[v _TMR4_Start TMR4_Start `(v  1 e 1 0 ]
-{
-"104
-} 0
-"59 /home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/tmr2.c
+"58 /home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/tmr2.c
 [v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
 {
-"86
+"85
 } 0
-"100
+"99
 [v _TMR2_Start TMR2_Start `(v  1 e 1 0 ]
 {
-"104
+"103
 } 0
 "64 /home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
 [v _SPI_Initialize SPI_Initialize `(v  1 e 1 0 ]
 {
-"76
+"78
 } 0
-"58 /home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm4.c
+"57 /home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm4.c
 [v _PWM4_Initialize PWM4_Initialize `(v  1 e 1 0 ]
 {
-"73
+"72
 } 0
-"58 /home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm3.c
+"57 /home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm3.c
 [v _PWM3_Initialize PWM3_Initialize `(v  1 e 1 0 ]
 {
-"73
+"72
 } 0
 "50 /home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
-"65
+"64
 [v PIN_MANAGER_Initialize@state state `uc  1 a 1 0 ]
-"86
+"84
 } 0
-"88 /home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/mcc.c
+"86 /home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/mcc.c
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 {
-"96
+"94
 } 0
-"148 /home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
-[v _SPI_HasReceiveOverflowOccured SPI_HasReceiveOverflowOccured `(uc  1 e 1 0 ]
-{
-"151
-} 0
-"78
+"80 /home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
 [v _SPI_Exchange8bit SPI_Exchange8bit `(uc  1 e 1 0 ]
 {
 [v SPI_Exchange8bit@data data `uc  1 a 1 wreg ]
-"80
+"82
 [v SPI_Exchange8bit@dummyRead dummyRead `uc  1 a 1 1 ]
-"78
-[v SPI_Exchange8bit@data data `uc  1 a 1 wreg ]
 "80
+[v SPI_Exchange8bit@data data `uc  1 a 1 wreg ]
+"82
 [v SPI_Exchange8bit@data data `uc  1 a 1 2 ]
-"92
+"94
 } 0
-"153
-[v _SPI_ClearReceiveOverflowStatus SPI_ClearReceiveOverflowStatus `(v  1 e 1 0 ]
-{
-"156
-} 0
-"75 /home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm4.c
+"74 /home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm4.c
 [v _PWM4_LoadDutyValue PWM4_LoadDutyValue `(v  1 e 1 0 ]
 {
 [v PWM4_LoadDutyValue@dutyValue dutyValue `ui  1 p 2 0 ]
-"82
+"81
 } 0
-"75 /home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm3.c
+"74 /home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm3.c
 [v _PWM3_LoadDutyValue PWM3_LoadDutyValue `(v  1 e 1 0 ]
 {
 [v PWM3_LoadDutyValue@dutyValue dutyValue `ui  1 p 2 0 ]
-"82
+"81
 } 0
