@@ -13225,13 +13225,13 @@ typedef int16_t intptr_t;
 
 typedef uint16_t uintptr_t;
 
-# 102 "mcc_generated_files/pwm4.h"
+# 101 "mcc_generated_files/pwm4.h"
 void PWM4_Initialize(void);
 
-# 129
+# 128
 void PWM4_LoadDutyValue(uint16_t dutyValue);
 
-# 58 "mcc_generated_files/pwm4.c"
+# 57 "mcc_generated_files/pwm4.c"
 void PWM4_Initialize(void)
 {
 
@@ -13239,14 +13239,14 @@ void PWM4_Initialize(void)
 PWM4CON = 0x90;
 
 
-PWM4DCH = 0x7F;
+PWM4DCH = 0x00;
 
 
-PWM4DCL = 0xC0;
+PWM4DCL = 0x00;
 
 
 
-CCPTMRSbits.P4TSEL = 0x1;
+CCPTMRSbits.P4TSEL = 0x0;
 }
 
 void PWM4_LoadDutyValue(uint16_t dutyValue)

@@ -13225,13 +13225,13 @@ typedef int16_t intptr_t;
 
 typedef uint16_t uintptr_t;
 
-# 102 "mcc_generated_files/pwm3.h"
+# 101 "mcc_generated_files/pwm3.h"
 void PWM3_Initialize(void);
 
-# 129
+# 128
 void PWM3_LoadDutyValue(uint16_t dutyValue);
 
-# 58 "mcc_generated_files/pwm3.c"
+# 57 "mcc_generated_files/pwm3.c"
 void PWM3_Initialize(void)
 {
 
@@ -13239,7 +13239,7 @@ void PWM3_Initialize(void)
 PWM3CON = 0x90;
 
 
-PWM3DCH = 0x32;
+PWM3DCH = 0x7F;
 
 
 PWM3DCL = 0xC0;

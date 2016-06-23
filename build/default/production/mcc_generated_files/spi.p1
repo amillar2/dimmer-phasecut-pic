@@ -5,6 +5,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _SSP1CON1 `Vuc ~T0 @X0 0 e@533 ]
 "5576
 [v _SSP1CON3 `Vuc ~T0 @X0 0 e@535 ]
+"6377
+[v _SLRCONC `Vuc ~T0 @X0 0 e@782 ]
 "4311
 [v _SSPBUF `Vuc ~T0 @X0 0 e@529 ]
 "5205
@@ -9739,14 +9741,16 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdint.h: 205: typedef uint32_t uintmax_t;
 [; ;stdint.h: 210: typedef int16_t intptr_t;
 [; ;stdint.h: 215: typedef uint16_t uintptr_t;
-[; ;spi.h: 117: void SPI_Initialize(void);
-[; ;spi.h: 152: uint8_t SPI_Exchange8bit(uint8_t data);
-[; ;spi.h: 192: uint8_t SPI_Exchange8bitBuffer(uint8_t *dataIn, uint8_t bufLen, uint8_t *dataOut);
-[; ;spi.h: 215: bool SPI_IsBufferFull(void);
-[; ;spi.h: 240: bool SPI_HasWriteCollisionOccured(void);
-[; ;spi.h: 264: void SPI_ClearWriteCollisionStatus(void);
-[; ;spi.h: 289: bool SPI_HasReceiveOverflowOccured(void);
-[; ;spi.h: 313: void SPI_ClearReceiveOverflowStatus(void);
+[; ;spi.h: 116: void SPI_Initialize(void);
+[; ;spi.h: 151: uint8_t SPI_Exchange8bit(uint8_t data);
+[; ;spi.h: 191: uint8_t SPI_Exchange8bitBuffer(uint8_t *dataIn, uint8_t bufLen, uint8_t *dataOut);
+[; ;spi.h: 214: bool SPI_IsBufferFull(void);
+[; ;spi.h: 239: bool SPI_HasWriteCollisionOccured(void);
+[; ;spi.h: 263: void SPI_ClearWriteCollisionStatus(void);
+[; ;spi.h: 288: bool SPI_HasReceiveOverflowOccured(void);
+[; ;spi.h: 312: void SPI_ClearReceiveOverflowStatus(void);
+[; ;pin_manager.h: 73: void PIN_MANAGER_Initialize (void);
+[; ;pin_manager.h: 85: void PIN_MANAGER_IOC(void);
 "64 mcc_generated_files/spi.c
 [v _SPI_Initialize `(v ~T0 @X0 1 ef ]
 "65
@@ -9764,259 +9768,262 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;spi.c: 75: SSP1CON3 = 0x00;
 "75
 [e = _SSP1CON3 -> -> 0 `i `uc ]
-[; ;spi.c: 76: }
-"76
+[; ;spi.c: 77: SLRCONC = 0X00;
+"77
+[e = _SLRCONC -> -> 0 `i `uc ]
+[; ;spi.c: 78: }
+"78
 [e :UE 1096 ]
 }
-"78
-[v _SPI_Exchange8bit `(uc ~T0 @X0 1 ef1`uc ]
-"79
-{
-[; ;spi.c: 78: uint8_t SPI_Exchange8bit(uint8_t data)
-[; ;spi.c: 79: {
-[e :U _SPI_Exchange8bit ]
-"78
-[v _data `uc ~T0 @X0 1 r1 ]
-"79
-[f ]
 "80
+[v _SPI_Exchange8bit `(uc ~T0 @X0 1 ef1`uc ]
+"81
+{
+[; ;spi.c: 80: uint8_t SPI_Exchange8bit(uint8_t data)
+[; ;spi.c: 81: {
+[e :U _SPI_Exchange8bit ]
+"80
+[v _data `uc ~T0 @X0 1 r1 ]
+"81
+[f ]
+"82
 [v _dummyRead `uc ~T0 @X0 1 a ]
-[; ;spi.c: 80: uint8_t dummyRead = SSPBUF;
+[; ;spi.c: 82: uint8_t dummyRead = SSPBUF;
 [e = _dummyRead _SSPBUF ]
-[; ;spi.c: 83: SSP1CON1bits.WCOL = 0;
-"83
-[e = . . _SSP1CON1bits 0 4 -> -> 0 `i `uc ]
-[; ;spi.c: 85: SSPBUF = data;
+[; ;spi.c: 85: SSP1CON1bits.WCOL = 0;
 "85
-[e = _SSPBUF _data ]
-[; ;spi.c: 87: while(SSP1STATbits.BF == 0x0)
+[e = . . _SSP1CON1bits 0 4 -> -> 0 `i `uc ]
+[; ;spi.c: 87: SSPBUF = data;
 "87
+[e = _SSPBUF _data ]
+[; ;spi.c: 89: while(SSP1STATbits.BF == 0x0)
+"89
 [e $U 1098  ]
 [e :U 1099 ]
-[; ;spi.c: 88: {
-"88
+[; ;spi.c: 90: {
+"90
 {
-"89
+"91
 }
 [e :U 1098 ]
-"87
+"89
 [e $ == -> . . _SSP1STATbits 0 0 `i -> 0 `i 1099  ]
 [e :U 1100 ]
-[; ;spi.c: 89: }
-[; ;spi.c: 91: return (SSPBUF);
-"91
+[; ;spi.c: 91: }
+[; ;spi.c: 93: return (SSPBUF);
+"93
 [e ) _SSPBUF ]
 [e $UE 1097  ]
-[; ;spi.c: 92: }
-"92
+[; ;spi.c: 94: }
+"94
 [e :UE 1097 ]
 }
-"94
+"96
 [v _SPI_Exchange8bitBuffer `(uc ~T0 @X0 1 ef3`*uc`uc`*uc ]
-"95
+"97
 {
-[; ;spi.c: 94: uint8_t SPI_Exchange8bitBuffer(uint8_t *dataIn, uint8_t bufLen, uint8_t *dataOut)
-[; ;spi.c: 95: {
+[; ;spi.c: 96: uint8_t SPI_Exchange8bitBuffer(uint8_t *dataIn, uint8_t bufLen, uint8_t *dataOut)
+[; ;spi.c: 97: {
 [e :U _SPI_Exchange8bitBuffer ]
-"94
+"96
 [v _dataIn `*uc ~T0 @X0 1 r1 ]
 [v _bufLen `uc ~T0 @X0 1 r2 ]
 [v _dataOut `*uc ~T0 @X0 1 r3 ]
-"95
-[f ]
-"96
-[v _bytesWritten `uc ~T0 @X0 1 a ]
-[; ;spi.c: 96: uint8_t bytesWritten = 0;
-[e = _bytesWritten -> -> 0 `i `uc ]
 "97
-[v _dummyRead `uc ~T0 @X0 1 a ]
-[; ;spi.c: 97: uint8_t dummyRead;
-[; ;spi.c: 99: if(bufLen != 0)
+[f ]
+"98
+[v _bytesWritten `uc ~T0 @X0 1 a ]
+[; ;spi.c: 98: uint8_t bytesWritten = 0;
+[e = _bytesWritten -> -> 0 `i `uc ]
 "99
-[e $ ! != -> _bufLen `i -> 0 `i 1102  ]
-[; ;spi.c: 100: {
-"100
-{
-[; ;spi.c: 101: if(dataIn != (0))
+[v _dummyRead `uc ~T0 @X0 1 a ]
+[; ;spi.c: 99: uint8_t dummyRead;
+[; ;spi.c: 101: if(bufLen != 0)
 "101
-[e $ ! != _dataIn -> -> 0 `i `*uc 1103  ]
+[e $ ! != -> _bufLen `i -> 0 `i 1102  ]
 [; ;spi.c: 102: {
 "102
 {
-[; ;spi.c: 103: while(bytesWritten < bufLen)
+[; ;spi.c: 103: if(dataIn != (0))
 "103
-[e $U 1104  ]
-[e :U 1105 ]
+[e $ ! != _dataIn -> -> 0 `i `*uc 1103  ]
 [; ;spi.c: 104: {
 "104
 {
-[; ;spi.c: 105: if(dataOut == (0))
+[; ;spi.c: 105: while(bytesWritten < bufLen)
 "105
-[e $ ! == _dataOut -> -> 0 `i `*uc 1107  ]
+[e $U 1104  ]
+[e :U 1105 ]
 [; ;spi.c: 106: {
 "106
 {
-[; ;spi.c: 107: dummyRead = SPI_Exchange8bit(dataIn[bytesWritten]);
+[; ;spi.c: 107: if(dataOut == (0))
 "107
-[e = _dummyRead ( _SPI_Exchange8bit (1 *U + _dataIn * -> _bytesWritten `ux -> -> # *U _dataIn `ui `ux ]
+[e $ ! == _dataOut -> -> 0 `i `*uc 1107  ]
+[; ;spi.c: 108: {
 "108
-}
-[; ;spi.c: 108: }
-[e $U 1108  ]
-"109
-[e :U 1107 ]
-[; ;spi.c: 109: else
-[; ;spi.c: 110: {
-"110
 {
-[; ;spi.c: 111: dataOut[bytesWritten] = SPI_Exchange8bit(dataIn[bytesWritten]);
+[; ;spi.c: 109: dummyRead = SPI_Exchange8bit(dataIn[bytesWritten]);
+"109
+[e = _dummyRead ( _SPI_Exchange8bit (1 *U + _dataIn * -> _bytesWritten `ux -> -> # *U _dataIn `ui `ux ]
+"110
+}
+[; ;spi.c: 110: }
+[e $U 1108  ]
 "111
-[e = *U + _dataOut * -> _bytesWritten `ux -> -> # *U _dataOut `ui `ux ( _SPI_Exchange8bit (1 *U + _dataIn * -> _bytesWritten `ux -> -> # *U _dataIn `ui `ux ]
+[e :U 1107 ]
+[; ;spi.c: 111: else
+[; ;spi.c: 112: {
 "112
+{
+[; ;spi.c: 113: dataOut[bytesWritten] = SPI_Exchange8bit(dataIn[bytesWritten]);
+"113
+[e = *U + _dataOut * -> _bytesWritten `ux -> -> # *U _dataOut `ui `ux ( _SPI_Exchange8bit (1 *U + _dataIn * -> _bytesWritten `ux -> -> # *U _dataIn `ui `ux ]
+"114
 }
 [e :U 1108 ]
-[; ;spi.c: 112: }
-[; ;spi.c: 114: bytesWritten++;
-"114
+[; ;spi.c: 114: }
+[; ;spi.c: 116: bytesWritten++;
+"116
 [e ++ _bytesWritten -> -> 1 `i `uc ]
-"115
+"117
 }
 [e :U 1104 ]
-"103
+"105
 [e $ < -> _bytesWritten `i -> _bufLen `i 1105  ]
 [e :U 1106 ]
-"116
-}
-[; ;spi.c: 115: }
-[; ;spi.c: 116: }
-[e $U 1109  ]
-"117
-[e :U 1103 ]
-[; ;spi.c: 117: else
-[; ;spi.c: 118: {
 "118
-{
-[; ;spi.c: 119: if(dataOut != (0))
+}
+[; ;spi.c: 117: }
+[; ;spi.c: 118: }
+[e $U 1109  ]
 "119
-[e $ ! != _dataOut -> -> 0 `i `*uc 1110  ]
+[e :U 1103 ]
+[; ;spi.c: 119: else
 [; ;spi.c: 120: {
 "120
 {
-[; ;spi.c: 121: while(bytesWritten < bufLen )
+[; ;spi.c: 121: if(dataOut != (0))
 "121
-[e $U 1111  ]
-[e :U 1112 ]
+[e $ ! != _dataOut -> -> 0 `i `*uc 1110  ]
 [; ;spi.c: 122: {
 "122
 {
-[; ;spi.c: 123: dataOut[bytesWritten] = SPI_Exchange8bit(0x0);
+[; ;spi.c: 123: while(bytesWritten < bufLen )
 "123
-[e = *U + _dataOut * -> _bytesWritten `ux -> -> # *U _dataOut `ui `ux ( _SPI_Exchange8bit (1 -> -> 0 `i `uc ]
-[; ;spi.c: 124: bytesWritten++;
+[e $U 1111  ]
+[e :U 1112 ]
+[; ;spi.c: 124: {
 "124
-[e ++ _bytesWritten -> -> 1 `i `uc ]
+{
+[; ;spi.c: 125: dataOut[bytesWritten] = SPI_Exchange8bit(0x0);
 "125
-}
-[e :U 1111 ]
-"121
-[e $ < -> _bytesWritten `i -> _bufLen `i 1112  ]
-[e :U 1113 ]
+[e = *U + _dataOut * -> _bytesWritten `ux -> -> # *U _dataOut `ui `ux ( _SPI_Exchange8bit (1 -> -> 0 `i `uc ]
+[; ;spi.c: 126: bytesWritten++;
 "126
-}
-[e :U 1110 ]
+[e ++ _bytesWritten -> -> 1 `i `uc ]
 "127
 }
-[e :U 1109 ]
+[e :U 1111 ]
+"123
+[e $ < -> _bytesWritten `i -> _bufLen `i 1112  ]
+[e :U 1113 ]
 "128
 }
+[e :U 1110 ]
+"129
+}
+[e :U 1109 ]
+"130
+}
 [e :U 1102 ]
-[; ;spi.c: 125: }
-[; ;spi.c: 126: }
 [; ;spi.c: 127: }
 [; ;spi.c: 128: }
-[; ;spi.c: 130: return bytesWritten;
-"130
+[; ;spi.c: 129: }
+[; ;spi.c: 130: }
+[; ;spi.c: 132: return bytesWritten;
+"132
 [e ) _bytesWritten ]
 [e $UE 1101  ]
-[; ;spi.c: 131: }
-"131
+[; ;spi.c: 133: }
+"133
 [e :UE 1101 ]
 }
-"133
+"135
 [v _SPI_IsBufferFull `(uc ~T0 @X0 1 ef ]
-"134
+"136
 {
-[; ;spi.c: 133: bool SPI_IsBufferFull(void)
-[; ;spi.c: 134: {
+[; ;spi.c: 135: bool SPI_IsBufferFull(void)
+[; ;spi.c: 136: {
 [e :U _SPI_IsBufferFull ]
 [f ]
-[; ;spi.c: 135: return (SSP1STATbits.BF);
-"135
+[; ;spi.c: 137: return (SSP1STATbits.BF);
+"137
 [e ) . . _SSP1STATbits 0 0 ]
 [e $UE 1114  ]
-[; ;spi.c: 136: }
-"136
+[; ;spi.c: 138: }
+"138
 [e :UE 1114 ]
 }
-"138
+"140
 [v _SPI_HasWriteCollisionOccured `(uc ~T0 @X0 1 ef ]
-"139
+"141
 {
-[; ;spi.c: 138: bool SPI_HasWriteCollisionOccured(void)
-[; ;spi.c: 139: {
+[; ;spi.c: 140: bool SPI_HasWriteCollisionOccured(void)
+[; ;spi.c: 141: {
 [e :U _SPI_HasWriteCollisionOccured ]
 [f ]
-[; ;spi.c: 140: return (SSP1CON1bits.WCOL);
-"140
+[; ;spi.c: 142: return (SSP1CON1bits.WCOL);
+"142
 [e ) . . _SSP1CON1bits 0 4 ]
 [e $UE 1115  ]
-[; ;spi.c: 141: }
-"141
+[; ;spi.c: 143: }
+"143
 [e :UE 1115 ]
 }
-"143
+"145
 [v _SPI_ClearWriteCollisionStatus `(v ~T0 @X0 1 ef ]
-"144
+"146
 {
-[; ;spi.c: 143: void SPI_ClearWriteCollisionStatus(void)
-[; ;spi.c: 144: {
+[; ;spi.c: 145: void SPI_ClearWriteCollisionStatus(void)
+[; ;spi.c: 146: {
 [e :U _SPI_ClearWriteCollisionStatus ]
 [f ]
-[; ;spi.c: 145: SSP1CON1bits.WCOL = 0;
-"145
+[; ;spi.c: 147: SSP1CON1bits.WCOL = 0;
+"147
 [e = . . _SSP1CON1bits 0 4 -> -> 0 `i `uc ]
-[; ;spi.c: 146: }
-"146
+[; ;spi.c: 148: }
+"148
 [e :UE 1116 ]
 }
-"148
+"150
 [v _SPI_HasReceiveOverflowOccured `(uc ~T0 @X0 1 ef ]
-"149
+"151
 {
-[; ;spi.c: 148: bool SPI_HasReceiveOverflowOccured(void)
-[; ;spi.c: 149: {
+[; ;spi.c: 150: bool SPI_HasReceiveOverflowOccured(void)
+[; ;spi.c: 151: {
 [e :U _SPI_HasReceiveOverflowOccured ]
 [f ]
-[; ;spi.c: 150: return (SSP1CON1bits.SSPOV);
-"150
+[; ;spi.c: 152: return (SSP1CON1bits.SSPOV);
+"152
 [e ) . . _SSP1CON1bits 0 3 ]
 [e $UE 1117  ]
-[; ;spi.c: 151: }
-"151
+[; ;spi.c: 153: }
+"153
 [e :UE 1117 ]
 }
-"153
+"155
 [v _SPI_ClearReceiveOverflowStatus `(v ~T0 @X0 1 ef ]
-"154
+"156
 {
-[; ;spi.c: 153: void SPI_ClearReceiveOverflowStatus(void)
-[; ;spi.c: 154: {
+[; ;spi.c: 155: void SPI_ClearReceiveOverflowStatus(void)
+[; ;spi.c: 156: {
 [e :U _SPI_ClearReceiveOverflowStatus ]
 [f ]
-[; ;spi.c: 155: SSP1CON1bits.SSPOV = 0;
-"155
+[; ;spi.c: 157: SSP1CON1bits.SSPOV = 0;
+"157
 [e = . . _SSP1CON1bits 0 3 -> -> 0 `i `uc ]
-[; ;spi.c: 156: }
-"156
+[; ;spi.c: 158: }
+"158
 [e :UE 1118 ]
 }

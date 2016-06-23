@@ -13234,29 +13234,35 @@ typedef int16_t intptr_t;
 
 typedef uint16_t uintptr_t;
 
-# 117 "mcc_generated_files/spi.h"
+# 116 "mcc_generated_files/spi.h"
 void SPI_Initialize(void);
 
-# 152
+# 151
 uint8_t SPI_Exchange8bit(uint8_t data);
 
-# 192
+# 191
 uint8_t SPI_Exchange8bitBuffer(uint8_t *dataIn, uint8_t bufLen, uint8_t *dataOut);
 
-# 215
+# 214
 bool SPI_IsBufferFull(void);
 
-# 240
+# 239
 bool SPI_HasWriteCollisionOccured(void);
 
-# 264
+# 263
 void SPI_ClearWriteCollisionStatus(void);
 
-# 289
+# 288
 bool SPI_HasReceiveOverflowOccured(void);
 
-# 313
+# 312
 void SPI_ClearReceiveOverflowStatus(void);
+
+# 73 "mcc_generated_files/pin_manager.h"
+void PIN_MANAGER_Initialize (void);
+
+# 85
+void PIN_MANAGER_IOC(void);
 
 # 64 "mcc_generated_files/spi.c"
 void SPI_Initialize(void)
@@ -13271,6 +13277,8 @@ SSP1CON1 = 0x24;
 
 
 SSP1CON3 = 0x00;
+
+SLRCONC = 0X00;
 }
 
 uint8_t SPI_Exchange8bit(uint8_t data)

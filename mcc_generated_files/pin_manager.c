@@ -13,7 +13,7 @@
   Description:
     This header file provides implementations for pin APIs for all pins selected in the GUI.
     Generation Information :
-        Product Revision  :  MPLAB(c) Code Configurator - v3.00
+        Product Revision  :  MPLAB(c) Code Configurator - 3.15.0
         Device            :  PIC16F1614
         Driver Version    :  1.02
     The generated drivers are tested against the following:
@@ -54,35 +54,33 @@ void PIN_MANAGER_Initialize(void)
     WPUA = 0x3F;
     WPUC = 0x3F;
     ANSELA = 0x17;
-    ANSELC = 0x4;
-    TRISC = 0xB;
-    TRISA = 0x24;
+    ANSELC = 0x1;
+    TRISC = 0xF;
+    TRISA = 0x36;
 
     OPTION_REGbits.nWPUEN = 0x1;
 
-    // interrupts-on-change are globally disabled
-    INTCONbits.IOCIE = 0;
+
     bool state = GIE;
     GIE = 0;
     PPSLOCK = 0x55;
     PPSLOCK = 0xAA;
     PPSLOCKbits.PPSLOCKED = 0x00; // unlock PPS
 
-    SSPSSPPS = 0x0013;   //RC3->MSSP:SS;
-    T2PPS = 0x0005;   //RA5->TMR2:T2IN;
-    SSPDATPPS = 0x0011;   //RC1->MSSP:SDI;
-    RA4PPS = 0x0003;   //RA4->ZCD:ZCD1OUT;
-    RC4PPS = 0x000E;   //RC4->PWM3:PWM3OUT;
-    RC2PPS = 0x0011;   //RC2->MSSP:SDO;
-    RC5PPS = 0x000F;   //RC5->PWM4:PWM4OUT;
-    SSPCLKPPS = 0x0010;   //RC0->MSSP:SCK;
-    T4PPS = 0x0005;   //RA5->TMR4:T4IN;
-    HIDRVC = 0X0030; //ENABLE HIGH CURRENT
+    SSPSSPPS = 0x13;   //RC3->MSSP:SS;
+    T2PPS = 0x05;   //RA5->TMR2:T2IN;
+    SSPDATPPS = 0x12;   //RC2->MSSP:SDI;
+    RC4PPS = 0x0F;   //RC4->PWM4:PWM4OUT;
+    RC5PPS = 0x0E;   //RC5->PWM3:PWM3OUT;
+    SSPCLKPPS = 0x11;   //RC1->MSSP:SCK;
+    RA0PPS = 0x03;   //RA0->ZCD:ZCD1OUT;
 
     PPSLOCK = 0x55;
     PPSLOCK = 0xAA;
     PPSLOCKbits.PPSLOCKED = 0x01; // lock PPS
+
     GIE = state;
+
 }
 
 

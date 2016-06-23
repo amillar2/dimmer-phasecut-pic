@@ -9720,36 +9720,36 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdint.h: 205: typedef uint32_t uintmax_t;
 [; ;stdint.h: 210: typedef int16_t intptr_t;
 [; ;stdint.h: 215: typedef uint16_t uintptr_t;
-[; ;zcd.h: 94: void ZCD_Initialize(void);
-[; ;zcd.h: 135: bool ZCD_IsLogicLevel(void);
-"58 mcc_generated_files/zcd.c
+[; ;zcd.h: 93: void ZCD_Initialize(void);
+[; ;zcd.h: 134: bool ZCD_IsLogicLevel(void);
+"57 mcc_generated_files/zcd.c
 [v _ZCD_Initialize `(v ~T0 @X0 1 ef ]
-"59
+"58
 {
-[; ;zcd.c: 58: void ZCD_Initialize (void)
-[; ;zcd.c: 59: {
+[; ;zcd.c: 57: void ZCD_Initialize (void)
+[; ;zcd.c: 58: {
 [e :U _ZCD_Initialize ]
 [f ]
-[; ;zcd.c: 63: ZCD1CON = 0x80;
-"63
+[; ;zcd.c: 62: ZCD1CON = 0x80;
+"62
 [e = _ZCD1CON -> -> 128 `i `uc ]
-[; ;zcd.c: 64: }
-"64
+[; ;zcd.c: 63: }
+"63
 [e :UE 1096 ]
 }
-"66
+"65
 [v _ZCD_IsLogicLevel `(uc ~T0 @X0 1 ef ]
-"67
+"66
 {
-[; ;zcd.c: 66: bool ZCD_IsLogicLevel(void)
-[; ;zcd.c: 67: {
+[; ;zcd.c: 65: bool ZCD_IsLogicLevel(void)
+[; ;zcd.c: 66: {
 [e :U _ZCD_IsLogicLevel ]
 [f ]
-[; ;zcd.c: 69: return (ZCD1CONbits.ZCD1OUT);
-"69
+[; ;zcd.c: 68: return (ZCD1CONbits.ZCD1OUT);
+"68
 [e ) . . _ZCD1CONbits 0 4 ]
 [e $UE 1097  ]
-[; ;zcd.c: 70: }
-"70
+[; ;zcd.c: 69: }
+"69
 [e :UE 1097 ]
 }

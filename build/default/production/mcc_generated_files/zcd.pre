@@ -13228,13 +13228,13 @@ typedef int16_t intptr_t;
 
 typedef uint16_t uintptr_t;
 
-# 94 "mcc_generated_files/zcd.h"
+# 93 "mcc_generated_files/zcd.h"
 void ZCD_Initialize(void);
 
-# 135
+# 134
 bool ZCD_IsLogicLevel(void);
 
-# 58 "mcc_generated_files/zcd.c"
+# 57 "mcc_generated_files/zcd.c"
 void ZCD_Initialize (void)
 {
 

@@ -9726,50 +9726,50 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdint.h: 205: typedef uint32_t uintmax_t;
 [; ;stdint.h: 210: typedef int16_t intptr_t;
 [; ;stdint.h: 215: typedef uint16_t uintptr_t;
-[; ;pwm4.h: 102: void PWM4_Initialize(void);
-[; ;pwm4.h: 129: void PWM4_LoadDutyValue(uint16_t dutyValue);
-"58 mcc_generated_files/pwm4.c
+[; ;pwm4.h: 101: void PWM4_Initialize(void);
+[; ;pwm4.h: 128: void PWM4_LoadDutyValue(uint16_t dutyValue);
+"57 mcc_generated_files/pwm4.c
 [v _PWM4_Initialize `(v ~T0 @X0 1 ef ]
-"59
+"58
 {
-[; ;pwm4.c: 58: void PWM4_Initialize(void)
-[; ;pwm4.c: 59: {
+[; ;pwm4.c: 57: void PWM4_Initialize(void)
+[; ;pwm4.c: 58: {
 [e :U _PWM4_Initialize ]
 [f ]
-[; ;pwm4.c: 62: PWM4CON = 0x90;
-"62
+[; ;pwm4.c: 61: PWM4CON = 0x90;
+"61
 [e = _PWM4CON -> -> 144 `i `uc ]
-[; ;pwm4.c: 65: PWM4DCH = 0x7F;
-"65
-[e = _PWM4DCH -> -> 127 `i `uc ]
-[; ;pwm4.c: 68: PWM4DCL = 0xC0;
-"68
-[e = _PWM4DCL -> -> 192 `i `uc ]
-[; ;pwm4.c: 72: CCPTMRSbits.P4TSEL = 0x1;
+[; ;pwm4.c: 64: PWM4DCH = 0x00;
+"64
+[e = _PWM4DCH -> -> 0 `i `uc ]
+[; ;pwm4.c: 67: PWM4DCL = 0x00;
+"67
+[e = _PWM4DCL -> -> 0 `i `uc ]
+[; ;pwm4.c: 71: CCPTMRSbits.P4TSEL = 0x0;
+"71
+[e = . . _CCPTMRSbits 0 3 -> -> 0 `i `uc ]
+[; ;pwm4.c: 72: }
 "72
-[e = . . _CCPTMRSbits 0 3 -> -> 1 `i `uc ]
-[; ;pwm4.c: 73: }
-"73
 [e :UE 1096 ]
 }
-"75
+"74
 [v _PWM4_LoadDutyValue `(v ~T0 @X0 1 ef1`ui ]
-"76
-{
-[; ;pwm4.c: 75: void PWM4_LoadDutyValue(uint16_t dutyValue)
-[; ;pwm4.c: 76: {
-[e :U _PWM4_LoadDutyValue ]
 "75
+{
+[; ;pwm4.c: 74: void PWM4_LoadDutyValue(uint16_t dutyValue)
+[; ;pwm4.c: 75: {
+[e :U _PWM4_LoadDutyValue ]
+"74
 [v _dutyValue `ui ~T0 @X0 1 r1 ]
-"76
+"75
 [f ]
-[; ;pwm4.c: 78: PWM4DCH = (dutyValue & 0x03FC)>>2;
-"78
+[; ;pwm4.c: 77: PWM4DCH = (dutyValue & 0x03FC)>>2;
+"77
 [e = _PWM4DCH -> >> & _dutyValue -> -> 1020 `i `ui -> 2 `i `uc ]
-[; ;pwm4.c: 81: PWM4DCL = (dutyValue & 0x0003)<<6;
-"81
+[; ;pwm4.c: 80: PWM4DCL = (dutyValue & 0x0003)<<6;
+"80
 [e = _PWM4DCL -> << & _dutyValue -> -> 3 `i `ui -> 6 `i `uc ]
-[; ;pwm4.c: 82: }
-"82
+[; ;pwm4.c: 81: }
+"81
 [e :UE 1097 ]
 }

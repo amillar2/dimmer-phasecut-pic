@@ -9726,50 +9726,50 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdint.h: 205: typedef uint32_t uintmax_t;
 [; ;stdint.h: 210: typedef int16_t intptr_t;
 [; ;stdint.h: 215: typedef uint16_t uintptr_t;
-[; ;pwm3.h: 102: void PWM3_Initialize(void);
-[; ;pwm3.h: 129: void PWM3_LoadDutyValue(uint16_t dutyValue);
-"58 mcc_generated_files/pwm3.c
+[; ;pwm3.h: 101: void PWM3_Initialize(void);
+[; ;pwm3.h: 128: void PWM3_LoadDutyValue(uint16_t dutyValue);
+"57 mcc_generated_files/pwm3.c
 [v _PWM3_Initialize `(v ~T0 @X0 1 ef ]
-"59
+"58
 {
-[; ;pwm3.c: 58: void PWM3_Initialize(void)
-[; ;pwm3.c: 59: {
+[; ;pwm3.c: 57: void PWM3_Initialize(void)
+[; ;pwm3.c: 58: {
 [e :U _PWM3_Initialize ]
 [f ]
-[; ;pwm3.c: 62: PWM3CON = 0x90;
-"62
+[; ;pwm3.c: 61: PWM3CON = 0x90;
+"61
 [e = _PWM3CON -> -> 144 `i `uc ]
-[; ;pwm3.c: 65: PWM3DCH = 0x32;
-"65
-[e = _PWM3DCH -> -> 50 `i `uc ]
-[; ;pwm3.c: 68: PWM3DCL = 0xC0;
-"68
+[; ;pwm3.c: 64: PWM3DCH = 0x7F;
+"64
+[e = _PWM3DCH -> -> 127 `i `uc ]
+[; ;pwm3.c: 67: PWM3DCL = 0xC0;
+"67
 [e = _PWM3DCL -> -> 192 `i `uc ]
-[; ;pwm3.c: 72: CCPTMRSbits.P3TSEL = 0x0;
-"72
+[; ;pwm3.c: 71: CCPTMRSbits.P3TSEL = 0x0;
+"71
 [e = . . _CCPTMRSbits 0 2 -> -> 0 `i `uc ]
-[; ;pwm3.c: 73: }
-"73
+[; ;pwm3.c: 72: }
+"72
 [e :UE 1096 ]
 }
-"75
+"74
 [v _PWM3_LoadDutyValue `(v ~T0 @X0 1 ef1`ui ]
-"76
-{
-[; ;pwm3.c: 75: void PWM3_LoadDutyValue(uint16_t dutyValue)
-[; ;pwm3.c: 76: {
-[e :U _PWM3_LoadDutyValue ]
 "75
+{
+[; ;pwm3.c: 74: void PWM3_LoadDutyValue(uint16_t dutyValue)
+[; ;pwm3.c: 75: {
+[e :U _PWM3_LoadDutyValue ]
+"74
 [v _dutyValue `ui ~T0 @X0 1 r1 ]
-"76
+"75
 [f ]
-[; ;pwm3.c: 78: PWM3DCH = (dutyValue & 0x03FC)>>2;
-"78
+[; ;pwm3.c: 77: PWM3DCH = (dutyValue & 0x03FC)>>2;
+"77
 [e = _PWM3DCH -> >> & _dutyValue -> -> 1020 `i `ui -> 2 `i `uc ]
-[; ;pwm3.c: 81: PWM3DCL = (dutyValue & 0x0003)<<6;
-"81
+[; ;pwm3.c: 80: PWM3DCL = (dutyValue & 0x0003)<<6;
+"80
 [e = _PWM3DCL -> << & _dutyValue -> -> 3 `i `ui -> 6 `i `uc ]
-[; ;pwm3.c: 82: }
-"82
+[; ;pwm3.c: 81: }
+"81
 [e :UE 1097 ]
 }

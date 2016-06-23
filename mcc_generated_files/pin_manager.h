@@ -13,7 +13,7 @@
   @Description:
     This header file provides implementations for pin APIs for all pins selected in the GUI.
     Generation Information :
-        Product Revision  :  MPLAB(c) Code Configurator - v3.00
+        Product Revision  :  MPLAB(c) Code Configurator - 3.15.0
         Device            :  PIC16F1614
         Version           :  1.01
     The generated drivers are tested against the following:

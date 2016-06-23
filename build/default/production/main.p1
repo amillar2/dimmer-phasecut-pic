@@ -1,20 +1,16 @@
 Version 3.2 HI-TECH Software Intermediate Code
 [p mainexit ]
-"73 mcc_generated_files/mcc.h
+"71 mcc_generated_files/mcc.h
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
-"129 mcc_generated_files/pwm3.h
+"25836 /opt/microchip/xc8/v1.36/include/pic16f1614.h
+[v _HIDC5 `Vb ~T0 @X0 0 e@8309 ]
+"25834
+[v _HIDC4 `Vb ~T0 @X0 0 e@8308 ]
+"128 mcc_generated_files/pwm3.h
 [v _PWM3_LoadDutyValue `(v ~T0 @X0 0 ef1`ui ]
-"129 mcc_generated_files/pwm4.h
+"128 mcc_generated_files/pwm4.h
 [v _PWM4_LoadDutyValue `(v ~T0 @X0 0 ef1`ui ]
-"289 mcc_generated_files/spi.h
-[v _SPI_HasReceiveOverflowOccured `(uc ~T0 @X0 0 ef ]
-"313
-[v _SPI_ClearReceiveOverflowStatus `(v ~T0 @X0 0 ef ]
-[v F10738 `(v ~T0 @X0 1 tf1`ul ]
-"152 /opt/microchip/xc8/v1.36/include/pic.h
-[v __delay `JF10738 ~T0 @X0 0 e ]
-[p i __delay ]
-"152 mcc_generated_files/spi.h
+"151 mcc_generated_files/spi.h
 [v _SPI_Exchange8bit `(uc ~T0 @X0 0 ef1`uc ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
@@ -9731,141 +9727,93 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdbool.h: 12: typedef unsigned char bool;
 [; ;__size_t.h: 4: typedef unsigned size_t;
 [; ;stddef.h: 6: typedef int ptrdiff_t;
-[; ;spi.h: 117: void SPI_Initialize(void);
-[; ;spi.h: 152: uint8_t SPI_Exchange8bit(uint8_t data);
-[; ;spi.h: 192: uint8_t SPI_Exchange8bitBuffer(uint8_t *dataIn, uint8_t bufLen, uint8_t *dataOut);
-[; ;spi.h: 215: bool SPI_IsBufferFull(void);
-[; ;spi.h: 240: bool SPI_HasWriteCollisionOccured(void);
-[; ;spi.h: 264: void SPI_ClearWriteCollisionStatus(void);
-[; ;spi.h: 289: bool SPI_HasReceiveOverflowOccured(void);
-[; ;spi.h: 313: void SPI_ClearReceiveOverflowStatus(void);
-[; ;pwm3.h: 102: void PWM3_Initialize(void);
-[; ;pwm3.h: 129: void PWM3_LoadDutyValue(uint16_t dutyValue);
-[; ;pwm4.h: 102: void PWM4_Initialize(void);
-[; ;pwm4.h: 129: void PWM4_LoadDutyValue(uint16_t dutyValue);
-[; ;tmr2.h: 79: typedef enum
-[; ;tmr2.h: 80: {
-[; ;tmr2.h: 89: TMR2_ROP_STARTS_TMRON,
-[; ;tmr2.h: 94: TMR2_ROP_STARTS_TMRON_ERSHIGH,
-[; ;tmr2.h: 99: TMR2_ROP_STARTS_TMRON_ERSLOW,
-[; ;tmr2.h: 104: TMR2_ROP_RESETS_ERSBOTHEDGE,
-[; ;tmr2.h: 109: TMR2_ROP_RESETS_ERSRISINGEDGE,
-[; ;tmr2.h: 114: TMR2_ROP_RESETS_ERSFALLINGEDGE,
-[; ;tmr2.h: 119: TMR2_ROP_RESETS_ERSLOW,
-[; ;tmr2.h: 124: TMR2_ROP_RESETS_ERSHIGH,
-[; ;tmr2.h: 135: TMR2_OS_STARTS_TMRON,
-[; ;tmr2.h: 140: TMR2_OS_STARTS_ERSRISINGEDGE ,
-[; ;tmr2.h: 145: TMR2_OS_STARTS_ERSFALLINGEDGE ,
-[; ;tmr2.h: 150: TMR2_OS_STARTS_ERSBOTHEDGE,
-[; ;tmr2.h: 156: TMR2_OS_STARTS_ERSFIRSTRISINGEDGE,
-[; ;tmr2.h: 162: TMR2_OS_STARTS_ERSFIRSTFALLINGEDGE,
-[; ;tmr2.h: 168: TMR2_OS_STARTS_ERSRISINGEDGEDETECT,
-[; ;tmr2.h: 173: TMR2_OS_STARTS_ERSFALLINGEDGEDETECT,
-[; ;tmr2.h: 178: TMR2_OS_STARTS_TMRON_ERSHIGH = 0x16,
-[; ;tmr2.h: 183: TMR2_OS_STARTS_TMRON_ERSLOW = 0x17,
-[; ;tmr2.h: 192: TMR2_MS_STARTS_TMRON_ERSRISINGEDGEDETECT = 0x11,
-[; ;tmr2.h: 197: TMR2_MS_STARTS_TMRON_ERSFALLINGEDGEDETECT = 0x12,
-[; ;tmr2.h: 203: TMR2_MS_STARTS_TMRON_ERSBOTHEDGE = 0x13
-[; ;tmr2.h: 205: } TMR2_HLT_MODE;
-[; ;tmr2.h: 220: typedef enum
-[; ;tmr2.h: 221: {
-[; ;tmr2.h: 225: TMR2_T2IN,
-[; ;tmr2.h: 229: TMR2_C1_OUT_SYNC,
-[; ;tmr2.h: 233: TMR2_C2_OUT_SYNC,
-[; ;tmr2.h: 237: TMR2_CCP1_OUT,
-[; ;tmr2.h: 241: TMR2_CCP2_OUT,
-[; ;tmr2.h: 245: TMR2_RESERVED,
-[; ;tmr2.h: 249: TMR2_T4POSTSCALED,
-[; ;tmr2.h: 253: TMR2_T6POSTSCALED,
-[; ;tmr2.h: 257: TMR2_ZCD1_OUTPUT,
-[; ;tmr2.h: 261: TMR2_LC1_OUT,
-[; ;tmr2.h: 265: TMR2_LC2_OUT,
-[; ;tmr2.h: 269: TMR2_PWM3_OUT = 0x0D,
-[; ;tmr2.h: 273: TMR2_PWM4_OUT = 0x0E
-[; ;tmr2.h: 276: } TMR2_HLT_EXT_RESET_SOURCE;
-[; ;tmr2.h: 318: void TMR2_Initialize(void);
-[; ;tmr2.h: 354: void TMR2_ModeSet(TMR2_HLT_MODE mode);
-[; ;tmr2.h: 389: void TMR2_ExtResetSourceSet(TMR2_HLT_EXT_RESET_SOURCE reset);
-[; ;tmr2.h: 418: void TMR2_Start(void);
-[; ;tmr2.h: 447: void TMR2_StartTimer(void);
-[; ;tmr2.h: 479: void TMR2_Stop(void);
-[; ;tmr2.h: 511: void TMR2_StopTimer(void);
-[; ;tmr2.h: 546: uint8_t TMR2_Counter8BitGet(void);
-[; ;tmr2.h: 581: uint8_t TMR2_ReadTimer(void);
-[; ;tmr2.h: 620: void TMR2_Counter8BitSet(uint8_t timerVal);
-[; ;tmr2.h: 659: void TMR2_WriteTimer(uint8_t timerVal);
-[; ;tmr2.h: 711: void TMR2_Period8BitSet(uint8_t periodVal);
-[; ;tmr2.h: 763: void TMR2_LoadPeriodRegister(uint8_t periodVal);
-[; ;tmr2.h: 801: bool TMR2_HasOverflowOccured(void);
-[; ;tmr4.h: 79: typedef enum
-[; ;tmr4.h: 80: {
-[; ;tmr4.h: 89: TMR4_ROP_STARTS_TMRON,
-[; ;tmr4.h: 94: TMR4_ROP_STARTS_TMRON_ERSHIGH,
-[; ;tmr4.h: 99: TMR4_ROP_STARTS_TMRON_ERSLOW,
-[; ;tmr4.h: 104: TMR4_ROP_RESETS_ERSBOTHEDGE,
-[; ;tmr4.h: 109: TMR4_ROP_RESETS_ERSRISINGEDGE,
-[; ;tmr4.h: 114: TMR4_ROP_RESETS_ERSFALLINGEDGE,
-[; ;tmr4.h: 119: TMR4_ROP_RESETS_ERSLOW,
-[; ;tmr4.h: 124: TMR4_ROP_RESETS_ERSHIGH,
-[; ;tmr4.h: 135: TMR4_OS_STARTS_TMRON,
-[; ;tmr4.h: 140: TMR4_OS_STARTS_ERSRISINGEDGE ,
-[; ;tmr4.h: 145: TMR4_OS_STARTS_ERSFALLINGEDGE ,
-[; ;tmr4.h: 150: TMR4_OS_STARTS_ERSBOTHEDGE,
-[; ;tmr4.h: 156: TMR4_OS_STARTS_ERSFIRSTRISINGEDGE,
-[; ;tmr4.h: 162: TMR4_OS_STARTS_ERSFIRSTFALLINGEDGE,
-[; ;tmr4.h: 168: TMR4_OS_STARTS_ERSRISINGEDGEDETECT,
-[; ;tmr4.h: 173: TMR4_OS_STARTS_ERSFALLINGEDGEDETECT,
-[; ;tmr4.h: 178: TMR4_OS_STARTS_TMRON_ERSHIGH = 0x16,
-[; ;tmr4.h: 183: TMR4_OS_STARTS_TMRON_ERSLOW = 0x17,
-[; ;tmr4.h: 192: TMR4_MS_STARTS_TMRON_ERSRISINGEDGEDETECT = 0x11,
-[; ;tmr4.h: 197: TMR4_MS_STARTS_TMRON_ERSFALLINGEDGEDETECT = 0x12,
-[; ;tmr4.h: 203: TMR4_MS_STARTS_TMRON_ERSBOTHEDGE = 0x13
-[; ;tmr4.h: 205: } TMR4_HLT_MODE;
-[; ;tmr4.h: 220: typedef enum
-[; ;tmr4.h: 221: {
-[; ;tmr4.h: 225: TMR4_T4IN,
-[; ;tmr4.h: 229: TMR4_C1_OUT_SYNC,
-[; ;tmr4.h: 233: TMR4_C2_OUT_SYNC,
-[; ;tmr4.h: 237: TMR4_CCP1_OUT,
-[; ;tmr4.h: 241: TMR4_CCP2_OUT,
-[; ;tmr4.h: 245: TMR4_T2POSTSCALED,
-[; ;tmr4.h: 249: TMR4_RESERVED,
-[; ;tmr4.h: 253: TMR4_T6POSTSCALED,
-[; ;tmr4.h: 257: TMR4_ZCD1_OUTPUT,
-[; ;tmr4.h: 261: TMR4_LC1_OUT,
-[; ;tmr4.h: 265: TMR4_LC2_OUT,
-[; ;tmr4.h: 269: TMR4_PWM3_OUT = 0x0D,
-[; ;tmr4.h: 273: TMR4_PWM4_OUT = 0x0E
-[; ;tmr4.h: 276: } TMR4_HLT_EXT_RESET_SOURCE;
-[; ;tmr4.h: 318: void TMR4_Initialize(void);
-[; ;tmr4.h: 354: void TMR4_ModeSet(TMR4_HLT_MODE mode);
-[; ;tmr4.h: 389: void TMR4_ExtResetSourceSet(TMR4_HLT_EXT_RESET_SOURCE reset);
-[; ;tmr4.h: 418: void TMR4_Start(void);
-[; ;tmr4.h: 447: void TMR4_StartTimer(void);
-[; ;tmr4.h: 479: void TMR4_Stop(void);
-[; ;tmr4.h: 511: void TMR4_StopTimer(void);
-[; ;tmr4.h: 546: uint8_t TMR4_Counter8BitGet(void);
-[; ;tmr4.h: 581: uint8_t TMR4_ReadTimer(void);
-[; ;tmr4.h: 620: void TMR4_Counter8BitSet(uint8_t timerVal);
-[; ;tmr4.h: 659: void TMR4_WriteTimer(uint8_t timerVal);
-[; ;tmr4.h: 711: void TMR4_Period8BitSet(uint8_t periodVal);
-[; ;tmr4.h: 763: void TMR4_LoadPeriodRegister(uint8_t periodVal);
-[; ;tmr4.h: 801: bool TMR4_HasOverflowOccured(void);
-[; ;zcd.h: 94: void ZCD_Initialize(void);
-[; ;zcd.h: 135: bool ZCD_IsLogicLevel(void);
-[; ;mcc.h: 73: void SYSTEM_Initialize(void);
-[; ;mcc.h: 86: void OSCILLATOR_Initialize(void);
-"52 main.c
+[; ;spi.h: 116: void SPI_Initialize(void);
+[; ;spi.h: 151: uint8_t SPI_Exchange8bit(uint8_t data);
+[; ;spi.h: 191: uint8_t SPI_Exchange8bitBuffer(uint8_t *dataIn, uint8_t bufLen, uint8_t *dataOut);
+[; ;spi.h: 214: bool SPI_IsBufferFull(void);
+[; ;spi.h: 239: bool SPI_HasWriteCollisionOccured(void);
+[; ;spi.h: 263: void SPI_ClearWriteCollisionStatus(void);
+[; ;spi.h: 288: bool SPI_HasReceiveOverflowOccured(void);
+[; ;spi.h: 312: void SPI_ClearReceiveOverflowStatus(void);
+[; ;pwm3.h: 101: void PWM3_Initialize(void);
+[; ;pwm3.h: 128: void PWM3_LoadDutyValue(uint16_t dutyValue);
+[; ;zcd.h: 93: void ZCD_Initialize(void);
+[; ;zcd.h: 134: bool ZCD_IsLogicLevel(void);
+[; ;pwm4.h: 101: void PWM4_Initialize(void);
+[; ;pwm4.h: 128: void PWM4_LoadDutyValue(uint16_t dutyValue);
+[; ;tmr2.h: 78: typedef enum
+[; ;tmr2.h: 79: {
+[; ;tmr2.h: 88: TMR2_ROP_STARTS_TMRON,
+[; ;tmr2.h: 93: TMR2_ROP_STARTS_TMRON_ERSHIGH,
+[; ;tmr2.h: 98: TMR2_ROP_STARTS_TMRON_ERSLOW,
+[; ;tmr2.h: 103: TMR2_ROP_RESETS_ERSBOTHEDGE,
+[; ;tmr2.h: 108: TMR2_ROP_RESETS_ERSRISINGEDGE,
+[; ;tmr2.h: 113: TMR2_ROP_RESETS_ERSFALLINGEDGE,
+[; ;tmr2.h: 118: TMR2_ROP_RESETS_ERSLOW,
+[; ;tmr2.h: 123: TMR2_ROP_RESETS_ERSHIGH,
+[; ;tmr2.h: 134: TMR2_OS_STARTS_TMRON,
+[; ;tmr2.h: 139: TMR2_OS_STARTS_ERSRISINGEDGE ,
+[; ;tmr2.h: 144: TMR2_OS_STARTS_ERSFALLINGEDGE ,
+[; ;tmr2.h: 149: TMR2_OS_STARTS_ERSBOTHEDGE,
+[; ;tmr2.h: 155: TMR2_OS_STARTS_ERSFIRSTRISINGEDGE,
+[; ;tmr2.h: 161: TMR2_OS_STARTS_ERSFIRSTFALLINGEDGE,
+[; ;tmr2.h: 167: TMR2_OS_STARTS_ERSRISINGEDGEDETECT,
+[; ;tmr2.h: 172: TMR2_OS_STARTS_ERSFALLINGEDGEDETECT,
+[; ;tmr2.h: 177: TMR2_OS_STARTS_TMRON_ERSHIGH = 0x16,
+[; ;tmr2.h: 182: TMR2_OS_STARTS_TMRON_ERSLOW = 0x17,
+[; ;tmr2.h: 191: TMR2_MS_STARTS_TMRON_ERSRISINGEDGEDETECT = 0x11,
+[; ;tmr2.h: 196: TMR2_MS_STARTS_TMRON_ERSFALLINGEDGEDETECT = 0x12,
+[; ;tmr2.h: 202: TMR2_MS_STARTS_TMRON_ERSBOTHEDGE = 0x13
+[; ;tmr2.h: 204: } TMR2_HLT_MODE;
+[; ;tmr2.h: 219: typedef enum
+[; ;tmr2.h: 220: {
+[; ;tmr2.h: 224: TMR2_T2IN,
+[; ;tmr2.h: 228: TMR2_C1_OUT_SYNC,
+[; ;tmr2.h: 232: TMR2_C2_OUT_SYNC,
+[; ;tmr2.h: 236: TMR2_CCP1_OUT,
+[; ;tmr2.h: 240: TMR2_CCP2_OUT,
+[; ;tmr2.h: 244: TMR2_RESERVED,
+[; ;tmr2.h: 248: TMR2_T4POSTSCALED,
+[; ;tmr2.h: 252: TMR2_T6POSTSCALED,
+[; ;tmr2.h: 256: TMR2_ZCD1_OUTPUT,
+[; ;tmr2.h: 260: TMR2_LC1_OUT,
+[; ;tmr2.h: 264: TMR2_LC2_OUT,
+[; ;tmr2.h: 268: TMR2_PWM3_OUT = 0x0D,
+[; ;tmr2.h: 272: TMR2_PWM4_OUT = 0x0E
+[; ;tmr2.h: 275: } TMR2_HLT_EXT_RESET_SOURCE;
+[; ;tmr2.h: 317: void TMR2_Initialize(void);
+[; ;tmr2.h: 353: void TMR2_ModeSet(TMR2_HLT_MODE mode);
+[; ;tmr2.h: 388: void TMR2_ExtResetSourceSet(TMR2_HLT_EXT_RESET_SOURCE reset);
+[; ;tmr2.h: 417: void TMR2_Start(void);
+[; ;tmr2.h: 446: void TMR2_StartTimer(void);
+[; ;tmr2.h: 478: void TMR2_Stop(void);
+[; ;tmr2.h: 510: void TMR2_StopTimer(void);
+[; ;tmr2.h: 545: uint8_t TMR2_Counter8BitGet(void);
+[; ;tmr2.h: 580: uint8_t TMR2_ReadTimer(void);
+[; ;tmr2.h: 619: void TMR2_Counter8BitSet(uint8_t timerVal);
+[; ;tmr2.h: 658: void TMR2_WriteTimer(uint8_t timerVal);
+[; ;tmr2.h: 710: void TMR2_Period8BitSet(uint8_t periodVal);
+[; ;tmr2.h: 762: void TMR2_LoadPeriodRegister(uint8_t periodVal);
+[; ;tmr2.h: 800: bool TMR2_HasOverflowOccured(void);
+[; ;mcc.h: 71: void SYSTEM_Initialize(void);
+[; ;mcc.h: 84: void OSCILLATOR_Initialize(void);
+"51 main.c
 [v _main `(v ~T0 @X0 1 ef ]
-"53
+"52
 {
-[; ;main.c: 52: void main(void)
-[; ;main.c: 53: {
+[; ;main.c: 51: void main(void)
+[; ;main.c: 52: {
 [e :U _main ]
 [f ]
-[; ;main.c: 55: SYSTEM_Initialize();
-"55
+[; ;main.c: 54: SYSTEM_Initialize();
+"54
 [e ( _SYSTEM_Initialize ..  ]
+[; ;main.c: 55: HIDC5 = 1;
+"55
+[e = _HIDC5 -> -> 1 `i `b ]
+[; ;main.c: 56: HIDC4 = 1;
+"56
+[e = _HIDC4 -> -> 1 `i `b ]
 "71
 [v _readDummy `uc ~T0 @X0 1 a ]
 [; ;main.c: 71: uint8_t readDummy = 0;
@@ -9880,15 +9828,15 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _data -> -> 0 `i `uc ]
 "74
 [v _pwm3 `uc ~T0 @X0 1 a ]
-[; ;main.c: 74: uint8_t pwm3 = 0;
-[e = _pwm3 -> -> 0 `i `uc ]
+[; ;main.c: 74: uint8_t pwm3 = 128;
+[e = _pwm3 -> -> 128 `i `uc ]
 "75
 [v _pwm4 `uc ~T0 @X0 1 a ]
 [; ;main.c: 75: uint8_t pwm4 = 0;
 [e = _pwm4 -> -> 0 `i `uc ]
 "77
-[v F10950 `Cui ~T0 @X0 -> 256 `i s cie ]
-[i F10950
+[v F10884 `Cui ~T0 @X0 -> 256 `i s cie ]
+[i F10884
 :U ..
 "78
 -> -> 0 `i `ui
@@ -10203,95 +10151,54 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 103: 973, 983, 993, 1003, 1014, 1023};
 [; ;main.c: 104: PWM3_LoadDutyValue(cie[pwm3]);
 "104
-[e ( _PWM3_LoadDutyValue (1 *U + &U F10950 * -> _pwm3 `ux -> -> # *U &U F10950 `ui `ux ]
+[e ( _PWM3_LoadDutyValue (1 *U + &U F10884 * -> _pwm3 `ux -> -> # *U &U F10884 `ui `ux ]
 [; ;main.c: 105: PWM4_LoadDutyValue(cie[pwm4]);
 "105
-[e ( _PWM4_LoadDutyValue (1 *U + &U F10950 * -> _pwm4 `ux -> -> # *U &U F10950 `ui `ux ]
+[e ( _PWM4_LoadDutyValue (1 *U + &U F10884 * -> _pwm4 `ux -> -> # *U &U F10884 `ui `ux ]
 [; ;main.c: 106: while (1)
 "106
 [e :U 1098 ]
 [; ;main.c: 107: {
 "107
 {
-[; ;main.c: 109: if (SPI_HasReceiveOverflowOccured()) {
+[; ;main.c: 109: addr = SPI_Exchange8bit(readDummy);
 "109
-[e $ ! != -> ( _SPI_HasReceiveOverflowOccured ..  `i -> -> -> 0 `i `uc `i 1100  ]
-{
-[; ;main.c: 110: SPI_ClearReceiveOverflowStatus();
-"110
-[e ( _SPI_ClearReceiveOverflowStatus ..  ]
-[; ;main.c: 111: _delay((unsigned long)((20)*(4000000/4000.0)));
-"111
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"112
-}
-[; ;main.c: 112: }
-[e $U 1101  ]
-"113
-[e :U 1100 ]
-[; ;main.c: 113: else {
-{
-[; ;main.c: 114: addr = SPI_Exchange8bit(readDummy);
-"114
 [e = _addr ( _SPI_Exchange8bit (1 _readDummy ]
-[; ;main.c: 115: if (SPI_HasReceiveOverflowOccured()) {
-"115
-[e $ ! != -> ( _SPI_HasReceiveOverflowOccured ..  `i -> -> -> 0 `i `uc `i 1102  ]
+[; ;main.c: 110: data = SPI_Exchange8bit(readDummy);
+"110
+[e = _data ( _SPI_Exchange8bit (1 _readDummy ]
+[; ;main.c: 112: if (addr==0) {
+"112
+[e $ ! == -> _addr `i -> 0 `i 1100  ]
 {
-[; ;main.c: 116: SPI_ClearReceiveOverflowStatus();
+[; ;main.c: 113: PWM3_LoadDutyValue(cie[255-data]);
+"113
+[e ( _PWM3_LoadDutyValue (1 *U + &U F10884 * -> -> - -> 255 `i -> _data `i `ui `ux -> -> # *U &U F10884 `ui `ux ]
+"114
+}
+[; ;main.c: 114: }
+[e $U 1101  ]
+"115
+[e :U 1100 ]
+[; ;main.c: 115: else if (addr==1) {
+[e $ ! == -> _addr `i -> 1 `i 1102  ]
+{
+[; ;main.c: 116: PWM4_LoadDutyValue(cie[255-data]);
 "116
-[e ( _SPI_ClearReceiveOverflowStatus ..  ]
+[e ( _PWM4_LoadDutyValue (1 *U + &U F10884 * -> -> - -> 255 `i -> _data `i `ui `ux -> -> # *U &U F10884 `ui `ux ]
 "117
 }
-[; ;main.c: 117: }
-[e $U 1103  ]
-"118
 [e :U 1102 ]
-[; ;main.c: 118: else {
-{
-[; ;main.c: 119: data = SPI_Exchange8bit(readDummy);
 "119
-[e = _data ( _SPI_Exchange8bit (1 _readDummy ]
-"120
-}
-[e :U 1103 ]
-"121
-}
 [e :U 1101 ]
-[; ;main.c: 120: }
-[; ;main.c: 121: }
-[; ;main.c: 123: if (addr==0) {
-"123
-[e $ ! == -> _addr `i -> 0 `i 1104  ]
-{
-[; ;main.c: 124: PWM3_LoadDutyValue(cie[data]);
-"124
-[e ( _PWM3_LoadDutyValue (1 *U + &U F10950 * -> _data `ux -> -> # *U &U F10950 `ui `ux ]
-"125
-}
-[; ;main.c: 125: }
-[e $U 1105  ]
-"126
-[e :U 1104 ]
-[; ;main.c: 126: else if (addr==1) {
-[e $ ! == -> _addr `i -> 1 `i 1106  ]
-{
-[; ;main.c: 127: PWM4_LoadDutyValue(cie[data]);
-"127
-[e ( _PWM4_LoadDutyValue (1 *U + &U F10950 * -> _data `ux -> -> # *U &U F10950 `ui `ux ]
-"128
-}
-[e :U 1106 ]
-"130
-[e :U 1105 ]
 }
 [e :U 1097 ]
 "106
 [e $U 1098  ]
 [e :U 1099 ]
-[; ;main.c: 128: }
-[; ;main.c: 130: }
-[; ;main.c: 131: }
-"131
+[; ;main.c: 117: }
+[; ;main.c: 119: }
+[; ;main.c: 120: }
+"120
 [e :UE 1096 ]
 }
