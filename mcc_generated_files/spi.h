@@ -311,6 +311,9 @@ bool SPI_HasReceiveOverflowOccured(void);
 */
 void SPI_ClearReceiveOverflowStatus(void);
 
+// SPI interrupt function
+void SPI_ISR(void);
+
 #ifdef __cplusplus  // Provide C++ Compatibility
 
     }

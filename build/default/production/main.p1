@@ -1,17 +1,30 @@
 Version 3.2 HI-TECH Software Intermediate Code
 [p mainexit ]
-"71 mcc_generated_files/mcc.h
+"72 mcc_generated_files/mcc.h
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
 "25836 /opt/microchip/xc8/v1.36/include/pic16f1614.h
 [v _HIDC5 `Vb ~T0 @X0 0 e@8309 ]
 "25834
 [v _HIDC4 `Vb ~T0 @X0 0 e@8308 ]
+"343
+[s S27 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S27 . IOCIF INTF TMR0IF IOCIE INTE TMR0IE PEIE GIE ]
+"353
+[s S28 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S28 . . T0IF . T0IE ]
+"342
+[u S26 `S27 1 `S28 1 ]
+[n S26 . . . ]
+"360
+[v _INTCONbits `VS26 ~T0 @X0 0 e@11 ]
 "128 mcc_generated_files/pwm3.h
 [v _PWM3_LoadDutyValue `(v ~T0 @X0 0 ef1`ui ]
 "128 mcc_generated_files/pwm4.h
 [v _PWM4_LoadDutyValue `(v ~T0 @X0 0 ef1`ui ]
-"151 mcc_generated_files/spi.h
-[v _SPI_Exchange8bit `(uc ~T0 @X0 0 ef1`uc ]
+[v F10738 `(v ~T0 @X0 1 tf1`ul ]
+"152 /opt/microchip/xc8/v1.36/include/pic.h
+[v __delay `JF10738 ~T0 @X0 0 e ]
+[p i __delay ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -9725,6 +9738,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdint.h: 210: typedef int16_t intptr_t;
 [; ;stdint.h: 215: typedef uint16_t uintptr_t;
 [; ;stdbool.h: 12: typedef unsigned char bool;
+[; ;interrupt_manager.h: 110: void interrupt INTERRUPT_InterruptManager(void);
 [; ;__size_t.h: 4: typedef unsigned size_t;
 [; ;stddef.h: 6: typedef int ptrdiff_t;
 [; ;spi.h: 116: void SPI_Initialize(void);
@@ -9735,6 +9749,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;spi.h: 263: void SPI_ClearWriteCollisionStatus(void);
 [; ;spi.h: 288: bool SPI_HasReceiveOverflowOccured(void);
 [; ;spi.h: 312: void SPI_ClearReceiveOverflowStatus(void);
+[; ;spi.h: 315: void SPI_ISR(void);
 [; ;pwm3.h: 101: void PWM3_Initialize(void);
 [; ;pwm3.h: 128: void PWM3_LoadDutyValue(uint16_t dutyValue);
 [; ;zcd.h: 93: void ZCD_Initialize(void);
@@ -9795,8 +9810,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;tmr2.h: 710: void TMR2_Period8BitSet(uint8_t periodVal);
 [; ;tmr2.h: 762: void TMR2_LoadPeriodRegister(uint8_t periodVal);
 [; ;tmr2.h: 800: bool TMR2_HasOverflowOccured(void);
-[; ;mcc.h: 71: void SYSTEM_Initialize(void);
-[; ;mcc.h: 84: void OSCILLATOR_Initialize(void);
+[; ;mcc.h: 72: void SYSTEM_Initialize(void);
+[; ;mcc.h: 85: void OSCILLATOR_Initialize(void);
 "4 cie1931.h
 [v _cie `Cuc ~T0 @X0 -> 256 `i e ]
 [i _cie
@@ -10113,99 +10128,140 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;cie1931.h: 29: 148, 138, 129, 120, 110, 100, 91, 81, 71, 61,
 [; ;cie1931.h: 30: 51, 41, 31, 21, 10, 0,
 [; ;cie1931.h: 31: };
-"52 main.c
+"50 main.c
+[v _pwm3 `Vuc ~T0 @X0 1 e ]
+[i _pwm3
+-> -> 0 `i `uc
+]
+[; ;main.c: 50: volatile uint8_t pwm3 = 0;
+"51
+[v _pwm4 `Vuc ~T0 @X0 1 e ]
+[i _pwm4
+-> -> 0 `i `uc
+]
+[; ;main.c: 51: volatile uint8_t pwm4 = 0;
+"55
 [v _main `(v ~T0 @X0 1 ef ]
-"53
+"56
 {
-[; ;main.c: 52: void main(void)
-[; ;main.c: 53: {
+[; ;main.c: 55: void main(void)
+[; ;main.c: 56: {
 [e :U _main ]
 [f ]
-[; ;main.c: 55: SYSTEM_Initialize();
-"55
+[; ;main.c: 58: SYSTEM_Initialize();
+"58
 [e ( _SYSTEM_Initialize ..  ]
-[; ;main.c: 56: HIDC5 = 1;
-"56
+[; ;main.c: 60: HIDC5 = 1;
+"60
 [e = _HIDC5 -> -> 1 `i `b ]
-[; ;main.c: 57: HIDC4 = 1;
-"57
+[; ;main.c: 61: HIDC4 = 1;
+"61
 [e = _HIDC4 -> -> 1 `i `b ]
-"72
-[v _readDummy `uc ~T0 @X0 1 a ]
-[; ;main.c: 72: uint8_t readDummy = 0;
-[e = _readDummy -> -> 0 `i `uc ]
-"73
-[v _addr `uc ~T0 @X0 1 a ]
-[; ;main.c: 73: uint8_t addr = 0;
-[e = _addr -> -> 0 `i `uc ]
-"74
-[v _data `uc ~T0 @X0 1 a ]
-[; ;main.c: 74: uint8_t data = 0;
-[e = _data -> -> 0 `i `uc ]
-"75
-[v _pwm3 `uc ~T0 @X0 1 a ]
-[; ;main.c: 75: uint8_t pwm3 = 0;
-[e = _pwm3 -> -> 0 `i `uc ]
-"76
-[v _pwm4 `uc ~T0 @X0 1 a ]
-[; ;main.c: 76: uint8_t pwm4 = 0;
-[e = _pwm4 -> -> 0 `i `uc ]
-[; ;main.c: 77: PWM3_LoadDutyValue(cie[pwm3]);
-"77
-[e ( _PWM3_LoadDutyValue (1 -> *U + &U _cie * -> _pwm3 `ux -> -> # *U &U _cie `ui `ux `ui ]
-[; ;main.c: 78: PWM4_LoadDutyValue(cie[pwm4]);
+[; ;main.c: 67: (INTCONbits.GIE = 1);
+"67
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+[; ;main.c: 70: (INTCONbits.PEIE = 1);
+"70
+[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
 "78
-[e ( _PWM4_LoadDutyValue (1 -> *U + &U _cie * -> _pwm4 `ux -> -> # *U &U _cie `ui `ux `ui ]
-[; ;main.c: 79: while (1)
+[v _pwm3_fade `uc ~T0 @X0 1 a ]
+[; ;main.c: 78: uint8_t pwm3_fade = 0;
+[e = _pwm3_fade -> -> 0 `i `uc ]
 "79
-[e :U 1098 ]
-[; ;main.c: 80: {
+[v _pwm4_fade `uc ~T0 @X0 1 a ]
+[; ;main.c: 79: uint8_t pwm4_fade = 0;
+[e = _pwm4_fade -> -> 0 `i `uc ]
+[; ;main.c: 80: PWM3_LoadDutyValue(cie[pwm3]);
 "80
-{
-[; ;main.c: 82: addr = SPI_Exchange8bit(readDummy);
-"82
-[e = _addr ( _SPI_Exchange8bit (1 _readDummy ]
-[; ;main.c: 83: data = SPI_Exchange8bit(readDummy);
-"83
-[e = _data ( _SPI_Exchange8bit (1 _readDummy ]
-[; ;main.c: 85: if (addr==0) {
-"85
-[e $ ! == -> _addr `i -> 0 `i 1100  ]
-{
-[; ;main.c: 86: pwm3 = data;
-"86
-[e = _pwm3 _data ]
-[; ;main.c: 87: PWM3_LoadDutyValue(cie[pwm3]);
-"87
 [e ( _PWM3_LoadDutyValue (1 -> *U + &U _cie * -> _pwm3 `ux -> -> # *U &U _cie `ui `ux `ui ]
-"88
-}
-[; ;main.c: 88: }
-[e $U 1101  ]
-"89
-[e :U 1100 ]
-[; ;main.c: 89: else if (addr==1) {
-[e $ ! == -> _addr `i -> 1 `i 1102  ]
-{
-[; ;main.c: 90: pwm4 = data;
-"90
-[e = _pwm4 _data ]
-[; ;main.c: 91: PWM4_LoadDutyValue(cie[pwm4]);
-"91
+[; ;main.c: 81: PWM4_LoadDutyValue(cie[pwm4]);
+"81
 [e ( _PWM4_LoadDutyValue (1 -> *U + &U _cie * -> _pwm4 `ux -> -> # *U &U _cie `ui `ux `ui ]
+[; ;main.c: 82: while (1)
+"82
+[e :U 1098 ]
+[; ;main.c: 83: {
+"83
+{
+[; ;main.c: 85: if(pwm3_fade < pwm3)
+"85
+[e $ ! < -> _pwm3_fade `i -> _pwm3 `i 1100  ]
+[; ;main.c: 86: {
+"86
+{
+[; ;main.c: 87: pwm3_fade++;
+"87
+[e ++ _pwm3_fade -> -> 1 `i `uc ]
+[; ;main.c: 88: PWM3_LoadDutyValue(cie[pwm3_fade]);
+"88
+[e ( _PWM3_LoadDutyValue (1 -> *U + &U _cie * -> _pwm3_fade `ux -> -> # *U &U _cie `ui `ux `ui ]
+"89
+}
+[; ;main.c: 89: }
+[e $U 1101  ]
+"90
+[e :U 1100 ]
+[; ;main.c: 90: else if(pwm3_fade >pwm3)
+[e $ ! > -> _pwm3_fade `i -> _pwm3 `i 1102  ]
+[; ;main.c: 91: {
+"91
+{
+[; ;main.c: 92: pwm3_fade--;
 "92
+[e -- _pwm3_fade -> -> 1 `i `uc ]
+[; ;main.c: 93: PWM3_LoadDutyValue(cie[pwm3_fade]);
+"93
+[e ( _PWM3_LoadDutyValue (1 -> *U + &U _cie * -> _pwm3_fade `ux -> -> # *U &U _cie `ui `ux `ui ]
+"94
 }
 [e :U 1102 ]
-"94
+"96
 [e :U 1101 ]
+[; ;main.c: 94: }
+[; ;main.c: 96: if(pwm4_fade < pwm4)
+[e $ ! < -> _pwm4_fade `i -> _pwm4 `i 1103  ]
+[; ;main.c: 97: {
+"97
+{
+[; ;main.c: 98: pwm4_fade++;
+"98
+[e ++ _pwm4_fade -> -> 1 `i `uc ]
+[; ;main.c: 99: PWM4_LoadDutyValue(cie[pwm4_fade]);
+"99
+[e ( _PWM4_LoadDutyValue (1 -> *U + &U _cie * -> _pwm4_fade `ux -> -> # *U &U _cie `ui `ux `ui ]
+"100
+}
+[; ;main.c: 100: }
+[e $U 1104  ]
+"101
+[e :U 1103 ]
+[; ;main.c: 101: else if(pwm4_fade >pwm4)
+[e $ ! > -> _pwm4_fade `i -> _pwm4 `i 1105  ]
+[; ;main.c: 102: {
+"102
+{
+[; ;main.c: 103: pwm4_fade--;
+"103
+[e -- _pwm4_fade -> -> 1 `i `uc ]
+[; ;main.c: 104: PWM4_LoadDutyValue(cie[pwm4_fade]);
+"104
+[e ( _PWM4_LoadDutyValue (1 -> *U + &U _cie * -> _pwm4_fade `ux -> -> # *U &U _cie `ui `ux `ui ]
+"105
+}
+[e :U 1105 ]
+"107
+[e :U 1104 ]
+[; ;main.c: 105: }
+[; ;main.c: 107: _delay((unsigned long)((5)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"108
 }
 [e :U 1097 ]
-"79
+"82
 [e $U 1098  ]
 [e :U 1099 ]
-[; ;main.c: 92: }
-[; ;main.c: 94: }
-[; ;main.c: 95: }
-"95
+[; ;main.c: 108: }
+[; ;main.c: 109: }
+"109
 [e :UE 1096 ]
 }

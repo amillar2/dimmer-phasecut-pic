@@ -46,6 +46,9 @@
 #include "mcc_generated_files/mcc.h"
 #include "cie1931.h"
 #define DELAY_TIME 5
+//globals for pwm state
+volatile uint8_t     pwm3 = 0; //PWM3 setting
+volatile uint8_t     pwm4 = 0; //PWM4 setting
 /*
                          Main application
  */
@@ -53,44 +56,55 @@ void main(void)
 {
     // initialize the device
     SYSTEM_Initialize();
+    // enable high drive mode for pwm pins
     HIDC5 = 1;
     HIDC4 = 1;
+
     // When using interrupts, you need to set the Global and Peripheral Interrupt Enable bits
     // Use the following macros to:
 
     // Enable the Global Interrupts
-    //INTERRUPT_GlobalInterruptEnable();
+    INTERRUPT_GlobalInterruptEnable();
 
     // Enable the Peripheral Interrupts
-    //INTERRUPT_PeripheralInterruptEnable();
+    INTERRUPT_PeripheralInterruptEnable();
 
     // Disable the Global Interrupts
     //INTERRUPT_GlobalInterruptDisable();
 
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
-    uint8_t     readDummy = 0; //dummy variable for SPI read
-    uint8_t     addr = 0; //address 0-PWM3 1-PWM4
-    uint8_t     data = 0; //PWM setting 0-256
-    uint8_t     pwm3 = 0; //PWM3 setting
-    uint8_t     pwm4 = 0; //PWM4 setting
+
+    uint8_t     pwm3_fade = 0; //PWM3 setting during fade
+    uint8_t     pwm4_fade = 0; //PWM4 setting during fade
     PWM3_LoadDutyValue(cie[pwm3]);
     PWM4_LoadDutyValue(cie[pwm4]);
     while (1)
     {
-        //SPI_ClearReceiveOverflowStatus();
-        addr = SPI_Exchange8bit(readDummy);//read address 0-PWM3 1-PWM4
-        data = SPI_Exchange8bit(readDummy);//read pwm setting
-        //blocking calls to perform gradual pwm set. consider adding handshake with esp?
-        if (addr==0) {
-            pwm3 = data;
-            PWM3_LoadDutyValue(cie[pwm3]);
+        //increment or decrement fade variable closer to desired pwm setting
+        if(pwm3_fade < pwm3)
+        {
+            pwm3_fade++;
+            PWM3_LoadDutyValue(cie[pwm3_fade]); 
         }
-        else if (addr==1) {
-            pwm4 = data;
-            PWM4_LoadDutyValue(cie[pwm4]);
+        else if(pwm3_fade >pwm3)
+        {
+            pwm3_fade--;
+            PWM3_LoadDutyValue(cie[pwm3_fade]);
         }
         
+        if(pwm4_fade < pwm4)
+        {
+            pwm4_fade++;
+            PWM4_LoadDutyValue(cie[pwm4_fade]); 
+        }
+        else if(pwm4_fade >pwm4)
+        {
+            pwm4_fade--;
+            PWM4_LoadDutyValue(cie[pwm4_fade]);
+        }
+        //delay time. Can't be a variable
+        __delay_ms(DELAY_TIME);
     }
 }
 /**

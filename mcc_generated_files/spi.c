@@ -50,6 +50,7 @@
 #include <xc.h>
 #include "spi.h"
 #include "pin_manager.h"
+#include "interrupt_manager.h"
 
 /**
   Section: Macro Declarations
@@ -156,6 +157,34 @@ void SPI_ClearReceiveOverflowStatus(void)
 {
     SSP1CON1bits.SSPOV = 0;
 }
+
+// ============================================
+// Add this line to share Cnt between main and TMR0_ISR
+extern volatile uint8_t pwm3;
+extern volatile uint8_t pwm4;
+
+void SPI_ISR(void)
+{
+    //disable interrupts to allow blocking reads following first byte
+   // Disable the Global Interrupts
+    INTERRUPT_GlobalInterruptDisable();
+
+    // Disable the Peripheral Interrupts
+    INTERRUPT_PeripheralInterruptDisable();
+    
+    uint8_t     readDummy = 0; //dummy variable for SPI read
+    uint8_t     addr = 0; //address 0-PWM3 1-PWM4
+    uint8_t     data = 0; //PWM setting 0-256
+    addr = SPI_Exchange8bit(readDummy);//read address 0-PWM3 1-PWM4
+    data = SPI_Exchange8bit(readDummy);//read pwm setting
+    if (addr==0) {
+            pwm3 = data;
+        }
+        else if (addr==1) {
+            pwm4 = data;
+        }
+}
+// ============================================
 /**
  End of File
 */

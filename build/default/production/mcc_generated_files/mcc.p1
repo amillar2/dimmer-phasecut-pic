@@ -1,7 +1,7 @@
 Version 3.2 HI-TECH Software Intermediate Code
 "73 mcc_generated_files/pin_manager.h
 [v _PIN_MANAGER_Initialize `(v ~T0 @X0 0 ef ]
-"84 mcc_generated_files/mcc.h
+"85 mcc_generated_files/mcc.h
 [v _OSCILLATOR_Initialize `(v ~T0 @X0 0 ef ]
 "116 mcc_generated_files/spi.h
 [v _SPI_Initialize `(v ~T0 @X0 0 ef ]
@@ -9766,6 +9766,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdint.h: 210: typedef int16_t intptr_t;
 [; ;stdint.h: 215: typedef uint16_t uintptr_t;
 [; ;stdbool.h: 12: typedef unsigned char bool;
+[; ;interrupt_manager.h: 110: void interrupt INTERRUPT_InterruptManager(void);
 [; ;__size_t.h: 4: typedef unsigned size_t;
 [; ;stddef.h: 6: typedef int ptrdiff_t;
 [; ;spi.h: 116: void SPI_Initialize(void);
@@ -9776,6 +9777,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;spi.h: 263: void SPI_ClearWriteCollisionStatus(void);
 [; ;spi.h: 288: bool SPI_HasReceiveOverflowOccured(void);
 [; ;spi.h: 312: void SPI_ClearReceiveOverflowStatus(void);
+[; ;spi.h: 315: void SPI_ISR(void);
 [; ;pwm3.h: 101: void PWM3_Initialize(void);
 [; ;pwm3.h: 128: void PWM3_LoadDutyValue(uint16_t dutyValue);
 [; ;zcd.h: 93: void ZCD_Initialize(void);
@@ -9836,8 +9838,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;tmr2.h: 710: void TMR2_Period8BitSet(uint8_t periodVal);
 [; ;tmr2.h: 762: void TMR2_LoadPeriodRegister(uint8_t periodVal);
 [; ;tmr2.h: 800: bool TMR2_HasOverflowOccured(void);
-[; ;mcc.h: 71: void SYSTEM_Initialize(void);
-[; ;mcc.h: 84: void OSCILLATOR_Initialize(void);
+[; ;mcc.h: 72: void SYSTEM_Initialize(void);
+[; ;mcc.h: 85: void OSCILLATOR_Initialize(void);
 "74 mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize `(v ~T0 @X0 1 ef ]
 "75
