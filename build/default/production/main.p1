@@ -21,6 +21,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _PWM3_LoadDutyValue `(v ~T0 @X0 0 ef1`ui ]
 "128 mcc_generated_files/pwm4.h
 [v _PWM4_LoadDutyValue `(v ~T0 @X0 0 ef1`ui ]
+"26142 /opt/microchip/xc8/v1.36/include/pic16f1614.h
+[v _LATA4 `Vb ~T0 @X0 0 e@2148 ]
 [v F10738 `(v ~T0 @X0 1 tf1`ul ]
 "152 /opt/microchip/xc8/v1.36/include/pic.h
 [v __delay `JF10738 ~T0 @X0 0 e ]
@@ -9707,8 +9709,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic.h: 186: extern unsigned char __resetbits;
 [; ;pic.h: 187: extern __bit __powerdown;
 [; ;pic.h: 188: extern __bit __timeout;
-[; ;pin_manager.h: 73: void PIN_MANAGER_Initialize (void);
-[; ;pin_manager.h: 85: void PIN_MANAGER_IOC(void);
+[; ;pin_manager.h: 206: void PIN_MANAGER_Initialize (void);
+[; ;pin_manager.h: 218: void PIN_MANAGER_IOC(void);
 [; ;stdint.h: 13: typedef signed char int8_t;
 [; ;stdint.h: 20: typedef signed int int16_t;
 [; ;stdint.h: 28: typedef signed short long int int24_t;
@@ -10171,97 +10173,104 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _pwm4_fade `uc ~T0 @X0 1 a ]
 [; ;main.c: 79: uint8_t pwm4_fade = 0;
 [e = _pwm4_fade -> -> 0 `i `uc ]
-[; ;main.c: 80: PWM3_LoadDutyValue(cie[pwm3]);
-"80
-[e ( _PWM3_LoadDutyValue (1 -> *U + &U _cie * -> _pwm3 `ux -> -> # *U &U _cie `ui `ux `ui ]
-[; ;main.c: 81: PWM4_LoadDutyValue(cie[pwm4]);
+[; ;main.c: 81: PWM3_LoadDutyValue(cie[pwm3]);
 "81
-[e ( _PWM4_LoadDutyValue (1 -> *U + &U _cie * -> _pwm4 `ux -> -> # *U &U _cie `ui `ux `ui ]
-[; ;main.c: 82: while (1)
+[e ( _PWM3_LoadDutyValue (1 -> *U + &U _cie * -> _pwm3 `ux -> -> # *U &U _cie `ui `ux `ui ]
+[; ;main.c: 82: PWM4_LoadDutyValue(cie[pwm4]);
 "82
-[e :U 1098 ]
-[; ;main.c: 83: {
+[e ( _PWM4_LoadDutyValue (1 -> *U + &U _cie * -> _pwm4 `ux -> -> # *U &U _cie `ui `ux `ui ]
+[; ;main.c: 83: do { LATA4 = 0; } while(0);
 "83
+[e :U 1099 ]
 {
-[; ;main.c: 85: if(pwm3_fade < pwm3)
-"85
-[e $ ! < -> _pwm3_fade `i -> _pwm3 `i 1100  ]
-[; ;main.c: 86: {
-"86
-{
-[; ;main.c: 87: pwm3_fade++;
-"87
-[e ++ _pwm3_fade -> -> 1 `i `uc ]
-[; ;main.c: 88: PWM3_LoadDutyValue(cie[pwm3_fade]);
-"88
-[e ( _PWM3_LoadDutyValue (1 -> *U + &U _cie * -> _pwm3_fade `ux -> -> # *U &U _cie `ui `ux `ui ]
-"89
+[e = _LATA4 -> -> 0 `i `b ]
 }
-[; ;main.c: 89: }
-[e $U 1101  ]
-"90
-[e :U 1100 ]
-[; ;main.c: 90: else if(pwm3_fade >pwm3)
-[e $ ! > -> _pwm3_fade `i -> _pwm3 `i 1102  ]
-[; ;main.c: 91: {
-"91
-{
-[; ;main.c: 92: pwm3_fade--;
-"92
-[e -- _pwm3_fade -> -> 1 `i `uc ]
-[; ;main.c: 93: PWM3_LoadDutyValue(cie[pwm3_fade]);
-"93
-[e ( _PWM3_LoadDutyValue (1 -> *U + &U _cie * -> _pwm3_fade `ux -> -> # *U &U _cie `ui `ux `ui ]
-"94
-}
-[e :U 1102 ]
-"96
+[e :U 1098 ]
+[; ;main.c: 84: while (1)
+"84
 [e :U 1101 ]
-[; ;main.c: 94: }
-[; ;main.c: 96: if(pwm4_fade < pwm4)
-[e $ ! < -> _pwm4_fade `i -> _pwm4 `i 1103  ]
-[; ;main.c: 97: {
-"97
+[; ;main.c: 85: {
+"85
 {
-[; ;main.c: 98: pwm4_fade++;
-"98
-[e ++ _pwm4_fade -> -> 1 `i `uc ]
-[; ;main.c: 99: PWM4_LoadDutyValue(cie[pwm4_fade]);
-"99
-[e ( _PWM4_LoadDutyValue (1 -> *U + &U _cie * -> _pwm4_fade `ux -> -> # *U &U _cie `ui `ux `ui ]
-"100
+[; ;main.c: 87: if(pwm3_fade < pwm3)
+"87
+[e $ ! < -> _pwm3_fade `i -> _pwm3 `i 1103  ]
+[; ;main.c: 88: {
+"88
+{
+[; ;main.c: 89: pwm3_fade++;
+"89
+[e ++ _pwm3_fade -> -> 1 `i `uc ]
+[; ;main.c: 90: PWM3_LoadDutyValue(cie[pwm3_fade]);
+"90
+[e ( _PWM3_LoadDutyValue (1 -> *U + &U _cie * -> _pwm3_fade `ux -> -> # *U &U _cie `ui `ux `ui ]
+"91
 }
-[; ;main.c: 100: }
+[; ;main.c: 91: }
 [e $U 1104  ]
-"101
+"92
 [e :U 1103 ]
-[; ;main.c: 101: else if(pwm4_fade >pwm4)
-[e $ ! > -> _pwm4_fade `i -> _pwm4 `i 1105  ]
-[; ;main.c: 102: {
-"102
+[; ;main.c: 92: else if(pwm3_fade >pwm3)
+[e $ ! > -> _pwm3_fade `i -> _pwm3 `i 1105  ]
+[; ;main.c: 93: {
+"93
 {
-[; ;main.c: 103: pwm4_fade--;
-"103
-[e -- _pwm4_fade -> -> 1 `i `uc ]
-[; ;main.c: 104: PWM4_LoadDutyValue(cie[pwm4_fade]);
-"104
-[e ( _PWM4_LoadDutyValue (1 -> *U + &U _cie * -> _pwm4_fade `ux -> -> # *U &U _cie `ui `ux `ui ]
-"105
+[; ;main.c: 94: pwm3_fade--;
+"94
+[e -- _pwm3_fade -> -> 1 `i `uc ]
+[; ;main.c: 95: PWM3_LoadDutyValue(cie[pwm3_fade]);
+"95
+[e ( _PWM3_LoadDutyValue (1 -> *U + &U _cie * -> _pwm3_fade `ux -> -> # *U &U _cie `ui `ux `ui ]
+"96
 }
 [e :U 1105 ]
-"107
+"98
 [e :U 1104 ]
-[; ;main.c: 105: }
-[; ;main.c: 107: _delay((unsigned long)((5)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"108
+[; ;main.c: 96: }
+[; ;main.c: 98: if(pwm4_fade < pwm4)
+[e $ ! < -> _pwm4_fade `i -> _pwm4 `i 1106  ]
+[; ;main.c: 99: {
+"99
+{
+[; ;main.c: 100: pwm4_fade++;
+"100
+[e ++ _pwm4_fade -> -> 1 `i `uc ]
+[; ;main.c: 101: PWM4_LoadDutyValue(cie[pwm4_fade]);
+"101
+[e ( _PWM4_LoadDutyValue (1 -> *U + &U _cie * -> _pwm4_fade `ux -> -> # *U &U _cie `ui `ux `ui ]
+"102
 }
-[e :U 1097 ]
-"82
-[e $U 1098  ]
-[e :U 1099 ]
-[; ;main.c: 108: }
-[; ;main.c: 109: }
+[; ;main.c: 102: }
+[e $U 1107  ]
+"103
+[e :U 1106 ]
+[; ;main.c: 103: else if(pwm4_fade >pwm4)
+[e $ ! > -> _pwm4_fade `i -> _pwm4 `i 1108  ]
+[; ;main.c: 104: {
+"104
+{
+[; ;main.c: 105: pwm4_fade--;
+"105
+[e -- _pwm4_fade -> -> 1 `i `uc ]
+[; ;main.c: 106: PWM4_LoadDutyValue(cie[pwm4_fade]);
+"106
+[e ( _PWM4_LoadDutyValue (1 -> *U + &U _cie * -> _pwm4_fade `ux -> -> # *U &U _cie `ui `ux `ui ]
+"107
+}
+[e :U 1108 ]
 "109
+[e :U 1107 ]
+[; ;main.c: 107: }
+[; ;main.c: 109: _delay((unsigned long)((5)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"110
+}
+[e :U 1100 ]
+"84
+[e $U 1101  ]
+[e :U 1102 ]
+[; ;main.c: 110: }
+[; ;main.c: 111: }
+"111
 [e :UE 1096 ]
 }

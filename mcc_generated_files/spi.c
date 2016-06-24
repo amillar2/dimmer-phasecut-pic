@@ -171,18 +171,21 @@ void SPI_ISR(void)
 
     // Disable the Peripheral Interrupts
     INTERRUPT_PeripheralInterruptDisable();
-    
+    //set output LED to indicate interrupt
+    IO_RA4_SetHigh(); 
     uint8_t     readDummy = 0; //dummy variable for SPI read
     uint8_t     addr = 0; //address 0-PWM3 1-PWM4
     uint8_t     data = 0; //PWM setting 0-256
     addr = SPI_Exchange8bit(readDummy);//read address 0-PWM3 1-PWM4
-    data = SPI_Exchange8bit(readDummy);//read pwm setting
+    data = SPI_Exchange8bit(readDummy);//read pwm setting (blocking)
     if (addr==0) {
             pwm3 = data;
         }
         else if (addr==1) {
             pwm4 = data;
         }
+    //clear output LED
+    IO_RA4_SetLow();
 }
 // ============================================
 /**

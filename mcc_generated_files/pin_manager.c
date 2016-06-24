@@ -56,9 +56,9 @@ void PIN_MANAGER_Initialize(void)
     ANSELA = 0x17;
     ANSELC = 0x1;
     TRISC = 0xF;
-    TRISA = 0x36;
+    TRISA = 0x26;
 
-    OPTION_REGbits.nWPUEN = 0x1;
+    OPTION_REGbits.nWPUEN = 0x0;
 
 
     bool state = GIE;

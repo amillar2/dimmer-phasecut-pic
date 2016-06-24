@@ -13261,10 +13261,10 @@ void SPI_ClearReceiveOverflowStatus(void);
 
 void SPI_ISR(void);
 
-# 73 "mcc_generated_files/pin_manager.h"
+# 206 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
 
-# 85
+# 218
 void PIN_MANAGER_IOC(void);
 
 # 110 "mcc_generated_files/interrupt_manager.h"
@@ -13381,6 +13381,7 @@ void SPI_ISR(void)
 
 (INTCONbits.PEIE = 0);
 
+do { LATA4 = 1; } while(0);
 uint8_t readDummy = 0;
 uint8_t addr = 0;
 uint8_t data = 0;
@@ -13392,5 +13393,7 @@ pwm3 = data;
 else if (addr==1) {
 pwm4 = data;
 }
+
+do { LATA4 = 0; } while(0);
 }
 

@@ -77,8 +77,10 @@ void main(void)
 
     uint8_t     pwm3_fade = 0; //PWM3 setting during fade
     uint8_t     pwm4_fade = 0; //PWM4 setting during fade
+    //initialize outputs
     PWM3_LoadDutyValue(cie[pwm3]);
     PWM4_LoadDutyValue(cie[pwm4]);
+    IO_RA4_SetLow();
     while (1)
     {
         //increment or decrement fade variable closer to desired pwm setting

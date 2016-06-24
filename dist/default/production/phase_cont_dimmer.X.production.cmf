@@ -11,26 +11,26 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$/tmp/xcXHxqraZ.obj
+$/tmp/xcXqP3IwK.obj
 reset_vec CODE 0 0 0 2 2
 end_init CODE 0 17 17 2 2
 config CONFIG 0 8007 8007 3 2
 $dist/default/production/phase_cont_dimmer.X.production.obj
 cinit CODE 0 19 19 6 2
-text1 CODE 0 230 230 15 2
-text2 CODE 0 282 282 4 2
-text3 CODE 0 245 245 F 2
-text4 CODE 0 286 286 3 2
-text5 CODE 0 275 275 8 2
-text6 CODE 0 26C 26C 9 2
-text7 CODE 0 261 261 B 2
-text8 CODE 0 19C 19C 3D 2
-text9 CODE 0 27D 27D 5 2
-text10 CODE 0 1FE 1FE 19 2
-text11 CODE 0 217 217 19 2
-text13 CODE 0 1D9 1D9 25 2
-text14 CODE 0 254 254 D 2
-maintext CODE 0 11F 11F 7D 2
+text1 CODE 0 236 236 15 2
+text2 CODE 0 288 288 4 2
+text3 CODE 0 24B 24B F 2
+text4 CODE 0 28C 28C 3 2
+text5 CODE 0 27B 27B 8 2
+text6 CODE 0 272 272 9 2
+text7 CODE 0 267 267 B 2
+text8 CODE 0 19E 19E 3D 2
+text9 CODE 0 283 283 5 2
+text10 CODE 0 204 204 19 2
+text11 CODE 0 21D 21D 19 2
+text13 CODE 0 1DB 1DB 29 2
+text14 CODE 0 25A 25A D 2
+maintext CODE 0 11F 11F 7F 2
 cstackCOMMON COMMON 1 70 70 8 1
 cstackBANK0 BANK0 1 20 20 8 1
 intentry CODE 0 4 4 13 2
@@ -57,9 +57,9 @@ BANK4 220-26F 1
 BANK5 2A0-2EF 1
 BANK6 320-32F 1
 CONST 2-3 2
-CONST 289-FFF 2
+CONST 28F-FFF 2
 ENTRY 2-3 2
-ENTRY 289-FFF 2
+ENTRY 28F-FFF 2
 IDLOC 8000-8003 2
 SFR10 500-56F 1
 SFR11 580-5EF 1
@@ -85,7 +85,7 @@ SFR30 F00-F6F 1
 SFR31 F80-FEF 1
 STACK 200A-21EF 1
 CODE 2-3 2
-CODE 289-FFF 2
+CODE 28F-FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-11F 1
@@ -99,9 +99,9 @@ SFR9 480-4EF 1
 BIGRAM 2000-21EF 1
 COMMON 78-7D 1
 STRCODE 2-3 2
-STRCODE 289-FFF 2
+STRCODE 28F-FFF 2
 STRING 2-3 2
-STRING 289-FFF 2
+STRING 28F-FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -116,122 +116,123 @@ STRING 289-FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production/phase_cont_dimmer.X.production.obj
-19 cinit CODE >7740:/tmp/xcXJNI2TO
-19 cinit CODE >7743:/tmp/xcXJNI2TO
-19 cinit CODE >7758:/tmp/xcXJNI2TO
-1A cinit CODE >7759:/tmp/xcXJNI2TO
-1B cinit CODE >7765:/tmp/xcXJNI2TO
-1B cinit CODE >7767:/tmp/xcXJNI2TO
-1C cinit CODE >7768:/tmp/xcXJNI2TO
-1D cinit CODE >7769:/tmp/xcXJNI2TO
+19 cinit CODE >7742:/tmp/xcXiFQW3F
+19 cinit CODE >7745:/tmp/xcXiFQW3F
+19 cinit CODE >7760:/tmp/xcXiFQW3F
+1A cinit CODE >7761:/tmp/xcXiFQW3F
+1B cinit CODE >7767:/tmp/xcXiFQW3F
+1B cinit CODE >7769:/tmp/xcXiFQW3F
+1C cinit CODE >7770:/tmp/xcXiFQW3F
+1D cinit CODE >7771:/tmp/xcXiFQW3F
 4 intentry CODE >51:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/interrupt_manager.c
 9 intentry CODE >54:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/interrupt_manager.c
 F intentry CODE >57:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/interrupt_manager.c
 10 intentry CODE >58:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/interrupt_manager.c
 12 intentry CODE >64:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/interrupt_manager.c
-254 text14 CODE >81:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
-255 text14 CODE >83:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
-25A text14 CODE >86:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
-25B text14 CODE >88:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
-25D text14 CODE >90:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
-25D text14 CODE >92:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
-25F text14 CODE >94:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
-1D9 text13 CODE >166:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
-1D9 text13 CODE >170:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
-1DA text13 CODE >173:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
-1DB text13 CODE >175:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
-1DC text13 CODE >176:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
-1DD text13 CODE >177:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
-1DE text13 CODE >178:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
-1E5 text13 CODE >179:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
-1EC text13 CODE >180:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
-1EF text13 CODE >181:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
-1F4 text13 CODE >182:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
-1F5 text13 CODE >183:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
-1F8 text13 CODE >184:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
-1FD text13 CODE >185:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
-217 text11 CODE >74:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm3.c
-217 text11 CODE >77:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm3.c
-223 text11 CODE >80:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm3.c
-22F text11 CODE >81:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm3.c
-1FE text10 CODE >74:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm4.c
-1FE text10 CODE >77:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm4.c
-20A text10 CODE >80:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm4.c
-216 text10 CODE >81:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm4.c
-27D text9 CODE >86:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/mcc.c
-27D text9 CODE >89:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/mcc.c
-280 text9 CODE >91:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/mcc.c
-281 text9 CODE >94:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/mcc.c
-19C text8 CODE >50:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
-19C text8 CODE >52:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
-19E text8 CODE >53:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
-19F text8 CODE >54:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
-1A2 text8 CODE >55:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
-1A4 text8 CODE >56:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
-1A7 text8 CODE >57:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
-1A9 text8 CODE >58:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
-1AC text8 CODE >59:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
-1AE text8 CODE >61:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
-1AF text8 CODE >64:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
-1B4 text8 CODE >65:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
-1B5 text8 CODE >66:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
-1B8 text8 CODE >67:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
-1BA text8 CODE >68:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
-1BB text8 CODE >70:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
-1BD text8 CODE >71:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
-1BF text8 CODE >72:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
-1C1 text8 CODE >73:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
-1C4 text8 CODE >74:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
-1C6 text8 CODE >75:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
-1C9 text8 CODE >76:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
-1CC text8 CODE >78:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
-1CF text8 CODE >79:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
-1D1 text8 CODE >80:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
-1D2 text8 CODE >82:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
-1D8 text8 CODE >84:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
-261 text7 CODE >57:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm3.c
-261 text7 CODE >61:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm3.c
-264 text7 CODE >64:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm3.c
-266 text7 CODE >67:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm3.c
-268 text7 CODE >71:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm3.c
-26B text7 CODE >72:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm3.c
-26C text6 CODE >57:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm4.c
-26C text6 CODE >61:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm4.c
-26F text6 CODE >64:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm4.c
-270 text6 CODE >67:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm4.c
-271 text6 CODE >71:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm4.c
-274 text6 CODE >72:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm4.c
-275 text5 CODE >65:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
-275 text5 CODE >70:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
-277 text5 CODE >73:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
-279 text5 CODE >76:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
-27A text5 CODE >78:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
-27C text5 CODE >79:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
-286 text4 CODE >99:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/tmr2.c
-286 text4 CODE >102:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/tmr2.c
-288 text4 CODE >103:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/tmr2.c
-245 text3 CODE >58:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/tmr2.c
-245 text3 CODE >63:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/tmr2.c
-247 text3 CODE >66:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/tmr2.c
-249 text3 CODE >69:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/tmr2.c
-24B text3 CODE >72:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/tmr2.c
-24D text3 CODE >75:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/tmr2.c
-24F text3 CODE >78:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/tmr2.c
-250 text3 CODE >81:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/tmr2.c
-251 text3 CODE >84:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/tmr2.c
-253 text3 CODE >85:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/tmr2.c
-282 text2 CODE >57:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/zcd.c
-282 text2 CODE >62:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/zcd.c
-285 text2 CODE >63:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/zcd.c
-230 text1 CODE >74:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/mcc.c
-230 text1 CODE >77:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/mcc.c
-233 text1 CODE >78:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/mcc.c
-236 text1 CODE >79:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/mcc.c
-239 text1 CODE >80:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/mcc.c
-23C text1 CODE >81:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/mcc.c
-23F text1 CODE >82:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/mcc.c
-242 text1 CODE >83:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/mcc.c
-244 text1 CODE >84:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/mcc.c
+25A text14 CODE >81:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
+25B text14 CODE >83:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
+260 text14 CODE >86:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
+261 text14 CODE >88:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
+263 text14 CODE >90:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
+263 text14 CODE >92:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
+265 text14 CODE >94:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
+1DB text13 CODE >166:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
+1DB text13 CODE >170:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
+1DC text13 CODE >173:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
+1DD text13 CODE >175:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
+1DF text13 CODE >176:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
+1E0 text13 CODE >177:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
+1E1 text13 CODE >178:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
+1E2 text13 CODE >179:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
+1E9 text13 CODE >180:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
+1F0 text13 CODE >181:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
+1F3 text13 CODE >182:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
+1F8 text13 CODE >183:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
+1F9 text13 CODE >184:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
+1FC text13 CODE >185:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
+201 text13 CODE >188:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
+21D text11 CODE >74:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm3.c
+21D text11 CODE >77:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm3.c
+229 text11 CODE >80:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm3.c
+235 text11 CODE >81:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm3.c
+204 text10 CODE >74:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm4.c
+204 text10 CODE >77:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm4.c
+210 text10 CODE >80:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm4.c
+21C text10 CODE >81:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm4.c
+283 text9 CODE >86:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/mcc.c
+283 text9 CODE >89:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/mcc.c
+286 text9 CODE >91:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/mcc.c
+287 text9 CODE >94:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/mcc.c
+19E text8 CODE >50:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
+19E text8 CODE >52:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
+1A0 text8 CODE >53:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
+1A1 text8 CODE >54:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
+1A4 text8 CODE >55:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
+1A6 text8 CODE >56:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
+1A9 text8 CODE >57:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
+1AB text8 CODE >58:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
+1AE text8 CODE >59:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
+1B0 text8 CODE >61:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
+1B1 text8 CODE >64:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
+1B6 text8 CODE >65:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
+1B7 text8 CODE >66:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
+1BA text8 CODE >67:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
+1BC text8 CODE >68:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
+1BD text8 CODE >70:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
+1BF text8 CODE >71:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
+1C1 text8 CODE >72:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
+1C3 text8 CODE >73:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
+1C6 text8 CODE >74:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
+1C8 text8 CODE >75:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
+1CB text8 CODE >76:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
+1CE text8 CODE >78:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
+1D1 text8 CODE >79:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
+1D3 text8 CODE >80:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
+1D4 text8 CODE >82:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
+1DA text8 CODE >84:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pin_manager.c
+267 text7 CODE >57:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm3.c
+267 text7 CODE >61:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm3.c
+26A text7 CODE >64:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm3.c
+26C text7 CODE >67:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm3.c
+26E text7 CODE >71:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm3.c
+271 text7 CODE >72:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm3.c
+272 text6 CODE >57:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm4.c
+272 text6 CODE >61:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm4.c
+275 text6 CODE >64:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm4.c
+276 text6 CODE >67:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm4.c
+277 text6 CODE >71:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm4.c
+27A text6 CODE >72:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/pwm4.c
+27B text5 CODE >65:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
+27B text5 CODE >70:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
+27D text5 CODE >73:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
+27F text5 CODE >76:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
+280 text5 CODE >78:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
+282 text5 CODE >79:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
+28C text4 CODE >99:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/tmr2.c
+28C text4 CODE >102:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/tmr2.c
+28E text4 CODE >103:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/tmr2.c
+24B text3 CODE >58:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/tmr2.c
+24B text3 CODE >63:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/tmr2.c
+24D text3 CODE >66:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/tmr2.c
+24F text3 CODE >69:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/tmr2.c
+251 text3 CODE >72:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/tmr2.c
+253 text3 CODE >75:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/tmr2.c
+255 text3 CODE >78:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/tmr2.c
+256 text3 CODE >81:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/tmr2.c
+257 text3 CODE >84:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/tmr2.c
+259 text3 CODE >85:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/tmr2.c
+288 text2 CODE >57:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/zcd.c
+288 text2 CODE >62:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/zcd.c
+28B text2 CODE >63:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/zcd.c
+236 text1 CODE >74:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/mcc.c
+236 text1 CODE >77:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/mcc.c
+239 text1 CODE >78:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/mcc.c
+23C text1 CODE >79:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/mcc.c
+23F text1 CODE >80:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/mcc.c
+242 text1 CODE >81:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/mcc.c
+245 text1 CODE >82:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/mcc.c
+248 text1 CODE >83:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/mcc.c
+24A text1 CODE >84:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/mcc.c
 11F maintext CODE >55:/home/mer/MPLABXProjects/phase_cont_dimmer.X/main.c
 11F maintext CODE >58:/home/mer/MPLABXProjects/phase_cont_dimmer.X/main.c
 122 maintext CODE >60:/home/mer/MPLABXProjects/phase_cont_dimmer.X/main.c
@@ -240,20 +241,21 @@ F intentry CODE >57:/home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_f
 126 maintext CODE >70:/home/mer/MPLABXProjects/phase_cont_dimmer.X/main.c
 127 maintext CODE >78:/home/mer/MPLABXProjects/phase_cont_dimmer.X/main.c
 129 maintext CODE >79:/home/mer/MPLABXProjects/phase_cont_dimmer.X/main.c
-12A maintext CODE >80:/home/mer/MPLABXProjects/phase_cont_dimmer.X/main.c
-13B maintext CODE >81:/home/mer/MPLABXProjects/phase_cont_dimmer.X/main.c
-14D maintext CODE >85:/home/mer/MPLABXProjects/phase_cont_dimmer.X/main.c
-152 maintext CODE >87:/home/mer/MPLABXProjects/phase_cont_dimmer.X/main.c
-157 maintext CODE >90:/home/mer/MPLABXProjects/phase_cont_dimmer.X/main.c
-15C maintext CODE >92:/home/mer/MPLABXProjects/phase_cont_dimmer.X/main.c
-15E maintext CODE >93:/home/mer/MPLABXProjects/phase_cont_dimmer.X/main.c
-16F maintext CODE >96:/home/mer/MPLABXProjects/phase_cont_dimmer.X/main.c
-174 maintext CODE >98:/home/mer/MPLABXProjects/phase_cont_dimmer.X/main.c
-179 maintext CODE >101:/home/mer/MPLABXProjects/phase_cont_dimmer.X/main.c
-17E maintext CODE >103:/home/mer/MPLABXProjects/phase_cont_dimmer.X/main.c
-180 maintext CODE >104:/home/mer/MPLABXProjects/phase_cont_dimmer.X/main.c
-191 maintext CODE >107:/home/mer/MPLABXProjects/phase_cont_dimmer.X/main.c
-19B maintext CODE >82:/home/mer/MPLABXProjects/phase_cont_dimmer.X/main.c
+12A maintext CODE >81:/home/mer/MPLABXProjects/phase_cont_dimmer.X/main.c
+13B maintext CODE >82:/home/mer/MPLABXProjects/phase_cont_dimmer.X/main.c
+14D maintext CODE >83:/home/mer/MPLABXProjects/phase_cont_dimmer.X/main.c
+14F maintext CODE >87:/home/mer/MPLABXProjects/phase_cont_dimmer.X/main.c
+154 maintext CODE >89:/home/mer/MPLABXProjects/phase_cont_dimmer.X/main.c
+159 maintext CODE >92:/home/mer/MPLABXProjects/phase_cont_dimmer.X/main.c
+15E maintext CODE >94:/home/mer/MPLABXProjects/phase_cont_dimmer.X/main.c
+160 maintext CODE >95:/home/mer/MPLABXProjects/phase_cont_dimmer.X/main.c
+171 maintext CODE >98:/home/mer/MPLABXProjects/phase_cont_dimmer.X/main.c
+176 maintext CODE >100:/home/mer/MPLABXProjects/phase_cont_dimmer.X/main.c
+17B maintext CODE >103:/home/mer/MPLABXProjects/phase_cont_dimmer.X/main.c
+180 maintext CODE >105:/home/mer/MPLABXProjects/phase_cont_dimmer.X/main.c
+182 maintext CODE >106:/home/mer/MPLABXProjects/phase_cont_dimmer.X/main.c
+193 maintext CODE >109:/home/mer/MPLABXProjects/phase_cont_dimmer.X/main.c
+19D maintext CODE >84:/home/mer/MPLABXProjects/phase_cont_dimmer.X/main.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -292,32 +294,32 @@ _T2PR 1B 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
 _TMR2 1A 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
 _WPUA 20C 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
 _WPUC 20E 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
-___sp 0 0 STACK 2 stack /tmp/xcXHxqraZ.obj
+___sp 0 0 STACK 2 stack /tmp/xcXqP3IwK.obj
 _main 23E 0 CODE 0 maintext dist/default/production/phase_cont_dimmer.X.production.obj
 _pwm3 28 0 BANK0 1 bssBANK0 dist/default/production/phase_cont_dimmer.X.production.obj
 _pwm4 29 0 BANK0 1 bssBANK0 dist/default/production/phase_cont_dimmer.X.production.obj
 btemp 7E 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
 ltemp 7E 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
-start 2E 0 CODE 0 init /tmp/xcXHxqraZ.obj
+start 2E 0 CODE 0 init /tmp/xcXqP3IwK.obj
 ttemp 7E 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
 wtemp 7E 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
-__end_of_PWM3_LoadDutyValue 460 0 CODE 0 text11 dist/default/production/phase_cont_dimmer.X.production.obj
+__end_of_PWM3_LoadDutyValue 46C 0 CODE 0 text11 dist/default/production/phase_cont_dimmer.X.production.obj
 __size_of_main 0 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
 _OPTION_REGbits 95 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
 __Hpowerup 0 0 CODE 0 powerup -
-_TMR2_Initialize 48A 0 CODE 0 text3 dist/default/production/phase_cont_dimmer.X.production.obj
+_TMR2_Initialize 496 0 CODE 0 text3 dist/default/production/phase_cont_dimmer.X.production.obj
 ttemp0 7E 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
 ttemp1 81 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
 ttemp2 84 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
 ttemp3 87 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
 ttemp4 7F 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
 __size_of_SYSTEM_Initialize 0 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
-intlevel0 0 0 CODE 0 functab /tmp/xcXHxqraZ.obj
-intlevel1 0 0 CODE 0 functab /tmp/xcXHxqraZ.obj
-intlevel2 0 0 CODE 0 functab /tmp/xcXHxqraZ.obj
-intlevel3 0 0 CODE 0 functab /tmp/xcXHxqraZ.obj
-intlevel4 0 0 CODE 0 functab /tmp/xcXHxqraZ.obj
-intlevel5 0 0 CODE 0 functab /tmp/xcXHxqraZ.obj
+intlevel0 0 0 CODE 0 functab /tmp/xcXqP3IwK.obj
+intlevel1 0 0 CODE 0 functab /tmp/xcXqP3IwK.obj
+intlevel2 0 0 CODE 0 functab /tmp/xcXqP3IwK.obj
+intlevel3 0 0 CODE 0 functab /tmp/xcXqP3IwK.obj
+intlevel4 0 0 CODE 0 functab /tmp/xcXqP3IwK.obj
+intlevel5 0 0 CODE 0 functab /tmp/xcXqP3IwK.obj
 PWM3_LoadDutyValue@dutyValue 20 0 BANK0 1 cstackBANK0 dist/default/production/phase_cont_dimmer.X.production.obj
 wtemp0 7E 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
 wtemp1 80 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
@@ -327,7 +329,7 @@ wtemp4 86 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
 wtemp5 88 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
 wtemp6 7F 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
 __size_of_PWM4_LoadDutyValue 0 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
-_PWM3_LoadDutyValue 42E 0 CODE 0 text11 dist/default/production/phase_cont_dimmer.X.production.obj
+_PWM3_LoadDutyValue 43A 0 CODE 0 text11 dist/default/production/phase_cont_dimmer.X.production.obj
 __Hfunctab 0 0 CODE 0 functab -
 SPI_Exchange8bit@dummyRead 71 0 COMMON 1 cstackCOMMON dist/default/production/phase_cont_dimmer.X.production.obj
 __Hclrtext 0 0 ABS 0 clrtext -
@@ -336,10 +338,10 @@ _ANSELA 18C 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
 _ANSELC 18E 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
 __end_of_INTERRUPT_InterruptManager 2E 0 CODE 0 intentry dist/default/production/phase_cont_dimmer.X.production.obj
 __Lmaintext 0 0 ABS 0 maintext -
-_ZCD_Initialize 504 0 CODE 0 text2 dist/default/production/phase_cont_dimmer.X.production.obj
+_ZCD_Initialize 510 0 CODE 0 text2 dist/default/production/phase_cont_dimmer.X.production.obj
 PIN_MANAGER_Initialize@state 20 0 BANK0 1 cstackBANK0 dist/default/production/phase_cont_dimmer.X.production.obj
 __size_of_TMR2_Initialize 0 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
-_PIN_MANAGER_Initialize 338 0 CODE 0 text8 dist/default/production/phase_cont_dimmer.X.production.obj
+_PIN_MANAGER_Initialize 33C 0 CODE 0 text8 dist/default/production/phase_cont_dimmer.X.production.obj
 __size_of_SPI_ISR 0 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
 start_initialization 32 0 CODE 0 cinit dist/default/production/phase_cont_dimmer.X.production.obj
 _CCPTMRSbits 29E 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
@@ -347,16 +349,16 @@ _OSCCON 99 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
 _RA0PPS E90 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
 _RC4PPS EA4 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
 _RC5PPS EA5 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
-__end_of_SYSTEM_Initialize 48A 0 CODE 0 text1 dist/default/production/phase_cont_dimmer.X.production.obj
+__end_of_SYSTEM_Initialize 496 0 CODE 0 text1 dist/default/production/phase_cont_dimmer.X.production.obj
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production/phase_cont_dimmer.X.production.obj
 _SSPBUF 211 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
 _T2CLKCON 1E 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
 SPI_ISR@addr 75 0 COMMON 1 cstackCOMMON dist/default/production/phase_cont_dimmer.X.production.obj
 SPI_ISR@data 76 0 COMMON 1 cstackCOMMON dist/default/production/phase_cont_dimmer.X.production.obj
-_TMR2_Start 50C 0 CODE 0 text4 dist/default/production/phase_cont_dimmer.X.production.obj
-__end_of_ZCD_Initialize 50C 0 CODE 0 text2 dist/default/production/phase_cont_dimmer.X.production.obj
-___int_sp 0 0 STACK 2 stack /tmp/xcXHxqraZ.obj
-__end_of_PWM3_Initialize 4D8 0 CODE 0 text7 dist/default/production/phase_cont_dimmer.X.production.obj
+_TMR2_Start 518 0 CODE 0 text4 dist/default/production/phase_cont_dimmer.X.production.obj
+__end_of_ZCD_Initialize 518 0 CODE 0 text2 dist/default/production/phase_cont_dimmer.X.production.obj
+___int_sp 0 0 STACK 2 stack /tmp/xcXqP3IwK.obj
+__end_of_PWM3_Initialize 4E4 0 CODE 0 text7 dist/default/production/phase_cont_dimmer.X.production.obj
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -456,7 +458,7 @@ __Lsfr29 0 0 ABS 0 sfr29 -
 __Lsfr30 0 0 ABS 0 sfr30 -
 __Lsfr31 0 0 ABS 0 sfr31 -
 __Lstack 0 0 STACK 2 stack -
-_SPI_Exchange8bit 4A8 0 CODE 0 text14 dist/default/production/phase_cont_dimmer.X.production.obj
+_SPI_Exchange8bit 4B4 0 CODE 0 text14 dist/default/production/phase_cont_dimmer.X.production.obj
 _INTCONbits B 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
 __Habs1 0 0 ABS 0 abs1 -
 __Hcode 0 0 ABS 0 code -
@@ -501,27 +503,27 @@ __S0 800A 0 ABS 0 - -
 __S1 78 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 _cie 3E 0 STRCODE 0 stringtext dist/default/production/phase_cont_dimmer.X.production.obj
-__end_of_SPI_ISR 3FC 0 CODE 0 text13 dist/default/production/phase_cont_dimmer.X.production.obj
+__end_of_SPI_ISR 408 0 CODE 0 text13 dist/default/production/phase_cont_dimmer.X.production.obj
 _ZCD1CONbits 11C 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
-__end_of_TMR2_Start 512 0 CODE 0 text4 dist/default/production/phase_cont_dimmer.X.production.obj
+__end_of_TMR2_Start 51E 0 CODE 0 text4 dist/default/production/phase_cont_dimmer.X.production.obj
 __CFG_PLLEN$ON 0 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
 __size_of_PWM3_LoadDutyValue 0 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
 _T2RSTbits 1F 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
-_PWM3_Initialize 4C2 0 CODE 0 text7 dist/default/production/phase_cont_dimmer.X.production.obj
-_SYSTEM_Initialize 460 0 CODE 0 text1 dist/default/production/phase_cont_dimmer.X.production.obj
+_PWM3_Initialize 4CE 0 CODE 0 text7 dist/default/production/phase_cont_dimmer.X.production.obj
+_SYSTEM_Initialize 46C 0 CODE 0 text1 dist/default/production/phase_cont_dimmer.X.production.obj
 __end_of_cie 23E 0 STRCODE 0 stringtext dist/default/production/phase_cont_dimmer.X.production.obj
 __CFG_BOREN$ON 0 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec /tmp/xcXHxqraZ.obj
+reset_vec 0 0 CODE 0 reset_vec /tmp/xcXqP3IwK.obj
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 _INTERRUPT_InterruptManager 8 0 CODE 0 intentry dist/default/production/phase_cont_dimmer.X.production.obj
-__end_of_PWM4_Initialize 4EA 0 CODE 0 text6 dist/default/production/phase_cont_dimmer.X.production.obj
+__end_of_PWM4_Initialize 4F6 0 CODE 0 text6 dist/default/production/phase_cont_dimmer.X.production.obj
 _PIE1bits 90 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
-__ptext10 3FC 0 CODE 0 text10 dist/default/production/phase_cont_dimmer.X.production.obj
-__ptext11 42E 0 CODE 0 text11 dist/default/production/phase_cont_dimmer.X.production.obj
-__ptext13 3B2 0 CODE 0 text13 dist/default/production/phase_cont_dimmer.X.production.obj
-__ptext14 4A8 0 CODE 0 text14 dist/default/production/phase_cont_dimmer.X.production.obj
-__end_of_PIN_MANAGER_Initialize 3B2 0 CODE 0 text8 dist/default/production/phase_cont_dimmer.X.production.obj
+__ptext10 408 0 CODE 0 text10 dist/default/production/phase_cont_dimmer.X.production.obj
+__ptext11 43A 0 CODE 0 text11 dist/default/production/phase_cont_dimmer.X.production.obj
+__ptext13 3B6 0 CODE 0 text13 dist/default/production/phase_cont_dimmer.X.production.obj
+__ptext14 4B4 0 CODE 0 text14 dist/default/production/phase_cont_dimmer.X.production.obj
+__end_of_PIN_MANAGER_Initialize 3B6 0 CODE 0 text8 dist/default/production/phase_cont_dimmer.X.production.obj
 __Lbank10 0 0 BANK10 1 bank10 -
 __Lbank11 0 0 BANK11 1 bank11 -
 __Lbank12 0 0 BANK12 1 bank12 -
@@ -547,24 +549,24 @@ __Lbank31 0 0 BANK31 1 bank31 -
 __pmaintext 23E 0 CODE 0 maintext dist/default/production/phase_cont_dimmer.X.production.obj
 __Lbigram 0 0 ABS 0 bigram -
 __CFG_BORV$LO 0 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
-_SPI_Initialize 4EA 0 CODE 0 text5 dist/default/production/phase_cont_dimmer.X.production.obj
-__end_of_SPI_Exchange8bit 4C2 0 CODE 0 text14 dist/default/production/phase_cont_dimmer.X.production.obj
+_SPI_Initialize 4F6 0 CODE 0 text5 dist/default/production/phase_cont_dimmer.X.production.obj
+__end_of_SPI_Exchange8bit 4CE 0 CODE 0 text14 dist/default/production/phase_cont_dimmer.X.production.obj
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 1000E 0 CONFIG 0 config -
 __CFG_CP$OFF 0 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
 __CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
 __size_of_SPI_Exchange8bit 0 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
-stackhi 21EF 0 ABS 0 - /tmp/xcXHxqraZ.obj
-stacklo 200A 0 ABS 0 - /tmp/xcXHxqraZ.obj
+stackhi 21EF 0 ABS 0 - /tmp/xcXqP3IwK.obj
+stacklo 200A 0 ABS 0 - /tmp/xcXqP3IwK.obj
 SPI_Exchange8bit@data 72 0 COMMON 1 cstackCOMMON dist/default/production/phase_cont_dimmer.X.production.obj
 _OSCTUNE 98 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
-__end_of_PWM4_LoadDutyValue 42E 0 CODE 0 text10 dist/default/production/phase_cont_dimmer.X.production.obj
+__end_of_PWM4_LoadDutyValue 43A 0 CODE 0 text10 dist/default/production/phase_cont_dimmer.X.production.obj
 __size_of_PWM3_Initialize 0 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
-_PWM4_Initialize 4D8 0 CODE 0 text6 dist/default/production/phase_cont_dimmer.X.production.obj
+_PWM4_Initialize 4E4 0 CODE 0 text6 dist/default/production/phase_cont_dimmer.X.production.obj
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
 _PIR1bits 10 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
 __Lend_init 2E 0 CODE 0 end_init -
@@ -574,7 +576,7 @@ __CFG_ZCD$OFF 0 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production
 end_of_initialization 36 0 CODE 0 cinit dist/default/production/phase_cont_dimmer.X.production.obj
 __Hintentry 2E 0 CODE 0 intentry -
 __CFG_STVREN$ON 0 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
-__end_of_SPI_Initialize 4FA 0 CODE 0 text5 dist/default/production/phase_cont_dimmer.X.production.obj
+__end_of_SPI_Initialize 506 0 CODE 0 text5 dist/default/production/phase_cont_dimmer.X.production.obj
 _PPSLOCKbits E0F 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
 __Lstrings 0 0 ABS 0 strings -
 __Hreset_vec 4 0 CODE 0 reset_vec -
@@ -582,16 +584,16 @@ __CFG_WDTCCS$SWC 0 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.product
 __HbssBANK0 0 0 ABS 0 bssBANK0 -
 _SSPCLKPPS E20 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
 _SSPDATPPS E21 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
-__ptext1 460 0 CODE 0 text1 dist/default/production/phase_cont_dimmer.X.production.obj
-__ptext2 504 0 CODE 0 text2 dist/default/production/phase_cont_dimmer.X.production.obj
-__ptext3 48A 0 CODE 0 text3 dist/default/production/phase_cont_dimmer.X.production.obj
-__ptext4 50C 0 CODE 0 text4 dist/default/production/phase_cont_dimmer.X.production.obj
-__ptext5 4EA 0 CODE 0 text5 dist/default/production/phase_cont_dimmer.X.production.obj
-__ptext6 4D8 0 CODE 0 text6 dist/default/production/phase_cont_dimmer.X.production.obj
-__ptext7 4C2 0 CODE 0 text7 dist/default/production/phase_cont_dimmer.X.production.obj
-__ptext8 338 0 CODE 0 text8 dist/default/production/phase_cont_dimmer.X.production.obj
-__ptext9 4FA 0 CODE 0 text9 dist/default/production/phase_cont_dimmer.X.production.obj
-_PWM4_LoadDutyValue 3FC 0 CODE 0 text10 dist/default/production/phase_cont_dimmer.X.production.obj
+__ptext1 46C 0 CODE 0 text1 dist/default/production/phase_cont_dimmer.X.production.obj
+__ptext2 510 0 CODE 0 text2 dist/default/production/phase_cont_dimmer.X.production.obj
+__ptext3 496 0 CODE 0 text3 dist/default/production/phase_cont_dimmer.X.production.obj
+__ptext4 518 0 CODE 0 text4 dist/default/production/phase_cont_dimmer.X.production.obj
+__ptext5 4F6 0 CODE 0 text5 dist/default/production/phase_cont_dimmer.X.production.obj
+__ptext6 4E4 0 CODE 0 text6 dist/default/production/phase_cont_dimmer.X.production.obj
+__ptext7 4CE 0 CODE 0 text7 dist/default/production/phase_cont_dimmer.X.production.obj
+__ptext8 33C 0 CODE 0 text8 dist/default/production/phase_cont_dimmer.X.production.obj
+__ptext9 506 0 CODE 0 text9 dist/default/production/phase_cont_dimmer.X.production.obj
+_PWM4_LoadDutyValue 408 0 CODE 0 text10 dist/default/production/phase_cont_dimmer.X.production.obj
 main@pwm3_fade 26 0 BANK0 1 cstackBANK0 dist/default/production/phase_cont_dimmer.X.production.obj
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
@@ -611,13 +613,14 @@ _ZCD1CON 11C 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.ob
 SPI_ISR@readDummy 74 0 COMMON 1 cstackCOMMON dist/default/production/phase_cont_dimmer.X.production.obj
 __Lclrtext 0 0 ABS 0 clrtext -
 _SSP1CON1bits 215 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
-_SPI_ISR 3B2 0 CODE 0 text13 dist/default/production/phase_cont_dimmer.X.production.obj
+_SPI_ISR 3B6 0 CODE 0 text13 dist/default/production/phase_cont_dimmer.X.production.obj
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production/phase_cont_dimmer.X.production.obj
 __Hend_init 32 0 CODE 0 end_init -
 __size_of_PWM4_Initialize 0 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
-__end_of_main 338 0 CODE 0 maintext dist/default/production/phase_cont_dimmer.X.production.obj
+__end_of_main 33C 0 CODE 0 maintext dist/default/production/phase_cont_dimmer.X.production.obj
 _HIDC4 2074 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
 _HIDC5 2075 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
+_LATA4 864 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
 _T2CON 1C 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
 _T2HLT 1D 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
 _T2PPS E18 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
@@ -629,7 +632,7 @@ __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
 __size_of_PIN_MANAGER_Initialize 0 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
 __pintentry 8 0 CODE 0 intentry dist/default/production/phase_cont_dimmer.X.production.obj
-__end_of_OSCILLATOR_Initialize 504 0 CODE 0 text9 dist/default/production/phase_cont_dimmer.X.production.obj
+__end_of_OSCILLATOR_Initialize 510 0 CODE 0 text9 dist/default/production/phase_cont_dimmer.X.production.obj
 __CFG_PPS1WAY$ON 0 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
 __initialization 32 0 CODE 0 cinit dist/default/production/phase_cont_dimmer.X.production.obj
 __CFG_PWRTE$OFF 0 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
@@ -638,8 +641,8 @@ _T2CONbits 1C 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.o
 __Hstringtext 0 0 ABS 0 stringtext -
 _PPSLOCK E0F 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
 __CFG_WRT$OFF 0 0 ABS 0 - dist/default/production/phase_cont_dimmer.X.production.obj
-_OSCILLATOR_Initialize 4FA 0 CODE 0 text9 dist/default/production/phase_cont_dimmer.X.production.obj
-__end_of_TMR2_Initialize 4A8 0 CODE 0 text3 dist/default/production/phase_cont_dimmer.X.production.obj
+_OSCILLATOR_Initialize 506 0 CODE 0 text9 dist/default/production/phase_cont_dimmer.X.production.obj
+__end_of_TMR2_Initialize 4B4 0 CODE 0 text3 dist/default/production/phase_cont_dimmer.X.production.obj
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -665,7 +668,7 @@ __end_of_TMR2_Initialize 4A8 0 CODE 0 text3 dist/default/production/phase_cont_d
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-maintext 0 11F 23E 16A 2
+maintext 0 11F 23E 170 2
 cstackCOMMON 1 70 70 8 1
 cstackBANK0 1 20 20 A 1
 intentry 0 4 8 1B 2

@@ -59,6 +59,139 @@
 #define PULL_UP_ENABLED      1
 #define PULL_UP_DISABLED     0
 
+// get/set IO_RA4 aliases
+#define IO_RA4_TRIS               TRISA4
+#define IO_RA4_LAT                LATA4
+#define IO_RA4_PORT               RA4
+#define IO_RA4_WPU                WPUA4
+#define IO_RA4_ANS                ANSA4
+#define IO_RA4_SetHigh()    do { LATA4 = 1; } while(0)
+#define IO_RA4_SetLow()   do { LATA4 = 0; } while(0)
+#define IO_RA4_Toggle()   do { LATA4 = ~LATA4; } while(0)
+#define IO_RA4_GetValue()         PORTAbits.RA4
+#define IO_RA4_SetDigitalInput()    do { TRISA4 = 1; } while(0)
+#define IO_RA4_SetDigitalOutput()   do { TRISA4 = 0; } while(0)
+
+#define IO_RA4_SetPullup()    do { WPUA4 = 1; } while(0)
+#define IO_RA4_ResetPullup()   do { WPUA4 = 0; } while(0)
+#define IO_RA4_SetAnalogMode()   do { ANSA4 = 1; } while(0)
+#define IO_RA4_SetDigitalMode()   do { ANSA4 = 0; } while(0)
+
+
+// get/set IO_RA4 aliases
+#define IO_RA4_TRIS               TRISA4
+#define IO_RA4_LAT                LATA4
+#define IO_RA4_PORT               RA4
+#define IO_RA4_WPU                WPUA4
+#define IO_RA4_ANS                ANSA4
+#define IO_RA4_SetHigh()    do { LATA4 = 1; } while(0)
+#define IO_RA4_SetLow()   do { LATA4 = 0; } while(0)
+#define IO_RA4_Toggle()   do { LATA4 = ~LATA4; } while(0)
+#define IO_RA4_GetValue()         PORTAbits.RA4
+#define IO_RA4_SetDigitalInput()    do { TRISA4 = 1; } while(0)
+#define IO_RA4_SetDigitalOutput()   do { TRISA4 = 0; } while(0)
+
+#define IO_RA4_SetPullup()    do { WPUA4 = 1; } while(0)
+#define IO_RA4_ResetPullup()   do { WPUA4 = 0; } while(0)
+#define IO_RA4_SetAnalogMode()   do { ANSA4 = 1; } while(0)
+#define IO_RA4_SetDigitalMode()   do { ANSA4 = 0; } while(0)
+
+
+// get/set IO_RA4 aliases
+#define IO_RA4_TRIS               TRISA4
+#define IO_RA4_LAT                LATA4
+#define IO_RA4_PORT               RA4
+#define IO_RA4_WPU                WPUA4
+#define IO_RA4_ANS                ANSA4
+#define IO_RA4_SetHigh()    do { LATA4 = 1; } while(0)
+#define IO_RA4_SetLow()   do { LATA4 = 0; } while(0)
+#define IO_RA4_Toggle()   do { LATA4 = ~LATA4; } while(0)
+#define IO_RA4_GetValue()         PORTAbits.RA4
+#define IO_RA4_SetDigitalInput()    do { TRISA4 = 1; } while(0)
+#define IO_RA4_SetDigitalOutput()   do { TRISA4 = 0; } while(0)
+
+#define IO_RA4_SetPullup()    do { WPUA4 = 1; } while(0)
+#define IO_RA4_ResetPullup()   do { WPUA4 = 0; } while(0)
+#define IO_RA4_SetAnalogMode()   do { ANSA4 = 1; } while(0)
+#define IO_RA4_SetDigitalMode()   do { ANSA4 = 0; } while(0)
+
+
+// get/set IO_RA4 aliases
+#define IO_RA4_TRIS               TRISA4
+#define IO_RA4_LAT                LATA4
+#define IO_RA4_PORT               RA4
+#define IO_RA4_WPU                WPUA4
+#define IO_RA4_ANS                ANSA4
+#define IO_RA4_SetHigh()    do { LATA4 = 1; } while(0)
+#define IO_RA4_SetLow()   do { LATA4 = 0; } while(0)
+#define IO_RA4_Toggle()   do { LATA4 = ~LATA4; } while(0)
+#define IO_RA4_GetValue()         PORTAbits.RA4
+#define IO_RA4_SetDigitalInput()    do { TRISA4 = 1; } while(0)
+#define IO_RA4_SetDigitalOutput()   do { TRISA4 = 0; } while(0)
+
+#define IO_RA4_SetPullup()    do { WPUA4 = 1; } while(0)
+#define IO_RA4_ResetPullup()   do { WPUA4 = 0; } while(0)
+#define IO_RA4_SetAnalogMode()   do { ANSA4 = 1; } while(0)
+#define IO_RA4_SetDigitalMode()   do { ANSA4 = 0; } while(0)
+
+
+// get/set IO_RA4 aliases
+#define IO_RA4_TRIS               TRISA4
+#define IO_RA4_LAT                LATA4
+#define IO_RA4_PORT               RA4
+#define IO_RA4_WPU                WPUA4
+#define IO_RA4_ANS                ANSA4
+#define IO_RA4_SetHigh()    do { LATA4 = 1; } while(0)
+#define IO_RA4_SetLow()   do { LATA4 = 0; } while(0)
+#define IO_RA4_Toggle()   do { LATA4 = ~LATA4; } while(0)
+#define IO_RA4_GetValue()         PORTAbits.RA4
+#define IO_RA4_SetDigitalInput()    do { TRISA4 = 1; } while(0)
+#define IO_RA4_SetDigitalOutput()   do { TRISA4 = 0; } while(0)
+
+#define IO_RA4_SetPullup()    do { WPUA4 = 1; } while(0)
+#define IO_RA4_ResetPullup()   do { WPUA4 = 0; } while(0)
+#define IO_RA4_SetAnalogMode()   do { ANSA4 = 1; } while(0)
+#define IO_RA4_SetDigitalMode()   do { ANSA4 = 0; } while(0)
+
+
+// get/set IO_RA4 aliases
+#define IO_RA4_TRIS               TRISA4
+#define IO_RA4_LAT                LATA4
+#define IO_RA4_PORT               RA4
+#define IO_RA4_WPU                WPUA4
+#define IO_RA4_ANS                ANSA4
+#define IO_RA4_SetHigh()    do { LATA4 = 1; } while(0)
+#define IO_RA4_SetLow()   do { LATA4 = 0; } while(0)
+#define IO_RA4_Toggle()   do { LATA4 = ~LATA4; } while(0)
+#define IO_RA4_GetValue()         PORTAbits.RA4
+#define IO_RA4_SetDigitalInput()    do { TRISA4 = 1; } while(0)
+#define IO_RA4_SetDigitalOutput()   do { TRISA4 = 0; } while(0)
+
+#define IO_RA4_SetPullup()    do { WPUA4 = 1; } while(0)
+#define IO_RA4_ResetPullup()   do { WPUA4 = 0; } while(0)
+#define IO_RA4_SetAnalogMode()   do { ANSA4 = 1; } while(0)
+#define IO_RA4_SetDigitalMode()   do { ANSA4 = 0; } while(0)
+
+
+// get/set IO_RA4 aliases
+#define IO_RA4_TRIS               TRISA4
+#define IO_RA4_LAT                LATA4
+#define IO_RA4_PORT               RA4
+#define IO_RA4_WPU                WPUA4
+#define IO_RA4_ANS                ANSA4
+#define IO_RA4_SetHigh()    do { LATA4 = 1; } while(0)
+#define IO_RA4_SetLow()   do { LATA4 = 0; } while(0)
+#define IO_RA4_Toggle()   do { LATA4 = ~LATA4; } while(0)
+#define IO_RA4_GetValue()         PORTAbits.RA4
+#define IO_RA4_SetDigitalInput()    do { TRISA4 = 1; } while(0)
+#define IO_RA4_SetDigitalOutput()   do { TRISA4 = 0; } while(0)
+
+#define IO_RA4_SetPullup()    do { WPUA4 = 1; } while(0)
+#define IO_RA4_ResetPullup()   do { WPUA4 = 0; } while(0)
+#define IO_RA4_SetAnalogMode()   do { ANSA4 = 1; } while(0)
+#define IO_RA4_SetDigitalMode()   do { ANSA4 = 0; } while(0)
+
+
 
 /**
  * @Param

@@ -204,7 +204,7 @@ TMR2_PWM4_OUT 14
 [v _TRISA TRISA `VEuc  1 e 1 @140 ]
 "1561
 [v _TRISC TRISC `VEuc  1 e 1 @142 ]
-[s S628 . 1 `uc 1 TMR1IE 1 0 :1:0 
+[s S591 . 1 `uc 1 TMR1IE 1 0 :1:0 
 `uc 1 TMR2IE 1 0 :1:1 
 `uc 1 CCP1IE 1 0 :1:2 
 `uc 1 SSP1IE 1 0 :1:3 
@@ -214,8 +214,8 @@ TMR2_PWM4_OUT 14
 `uc 1 TMR1GIE 1 0 :1:7 
 ]
 "1627
-[u S637 . 1 `S628 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES637  1 e 1 @144 ]
+[u S600 . 1 `S591 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES600  1 e 1 @144 ]
 [s S380 . 1 `uc 1 PS 1 0 :3:0 
 `uc 1 PSA 1 0 :1:3 
 `uc 1 TMR0SE 1 0 :1:4 
@@ -354,6 +354,8 @@ TMR2_PWM4_OUT 14
 [v _HIDC4 HIDC4 `VEb  1 e 0 @8308 ]
 "25836
 [v _HIDC5 HIDC5 `VEb  1 e 0 @8309 ]
+"26142
+[v _LATA4 LATA4 `VEb  1 e 0 @2148 ]
 "4 /home/mer/MPLABXProjects/phase_cont_dimmer.X/cie1931.h
 [v _cie cie `DCC[256]uc  1 e 256 0 ]
 "50 /home/mer/MPLABXProjects/phase_cont_dimmer.X/main.c
@@ -367,7 +369,7 @@ TMR2_PWM4_OUT 14
 [v main@pwm4_fade pwm4_fade `uc  1 a 1 7 ]
 "78
 [v main@pwm3_fade pwm3_fade `uc  1 a 1 6 ]
-"109
+"111
 } 0
 "74 /home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
@@ -436,13 +438,13 @@ TMR2_PWM4_OUT 14
 "166 /home/mer/MPLABXProjects/phase_cont_dimmer.X/mcc_generated_files/spi.c
 [v _SPI_ISR SPI_ISR `(v  1 e 1 0 ]
 {
-"177
+"178
 [v SPI_ISR@data data `uc  1 a 1 6 ]
-"176
+"177
 [v SPI_ISR@addr addr `uc  1 a 1 5 ]
-"175
+"176
 [v SPI_ISR@readDummy readDummy `uc  1 a 1 4 ]
-"186
+"189
 } 0
 "81
 [v _SPI_Exchange8bit SPI_Exchange8bit `(uc  1 e 1 0 ]

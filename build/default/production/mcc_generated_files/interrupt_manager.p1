@@ -9700,8 +9700,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic.h: 186: extern unsigned char __resetbits;
 [; ;pic.h: 187: extern __bit __powerdown;
 [; ;pic.h: 188: extern __bit __timeout;
-[; ;pin_manager.h: 73: void PIN_MANAGER_Initialize (void);
-[; ;pin_manager.h: 85: void PIN_MANAGER_IOC(void);
+[; ;pin_manager.h: 206: void PIN_MANAGER_Initialize (void);
+[; ;pin_manager.h: 218: void PIN_MANAGER_IOC(void);
 [; ;stdint.h: 13: typedef signed char int8_t;
 [; ;stdint.h: 20: typedef signed int int16_t;
 [; ;stdint.h: 28: typedef signed short long int int24_t;

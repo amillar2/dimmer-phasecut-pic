@@ -39,6 +39,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S26 . . . ]
 "360
 [v _INTCONbits `VS26 ~T0 @X0 0 e@11 ]
+"26142
+[v _LATA4 `Vb ~T0 @X0 0 e@2148 ]
 "163 mcc_generated_files/spi.c
 [v _pwm3 `Vuc ~T0 @X0 0 e ]
 "164
@@ -9765,8 +9767,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;spi.h: 288: bool SPI_HasReceiveOverflowOccured(void);
 [; ;spi.h: 312: void SPI_ClearReceiveOverflowStatus(void);
 [; ;spi.h: 315: void SPI_ISR(void);
-[; ;pin_manager.h: 73: void PIN_MANAGER_Initialize (void);
-[; ;pin_manager.h: 85: void PIN_MANAGER_IOC(void);
+[; ;pin_manager.h: 206: void PIN_MANAGER_Initialize (void);
+[; ;pin_manager.h: 218: void PIN_MANAGER_IOC(void);
 [; ;interrupt_manager.h: 110: void interrupt INTERRUPT_InterruptManager(void);
 "65 mcc_generated_files/spi.c
 [v _SPI_Initialize `(v ~T0 @X0 1 ef ]
@@ -10060,49 +10062,63 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;spi.c: 173: (INTCONbits.PEIE = 0);
 "173
 [e = . . _INTCONbits 0 6 -> -> 0 `i `uc ]
+[; ;spi.c: 175: do { LATA4 = 1; } while(0);
 "175
-[v _readDummy `uc ~T0 @X0 1 a ]
-[; ;spi.c: 175: uint8_t readDummy = 0;
-[e = _readDummy -> -> 0 `i `uc ]
-"176
-[v _addr `uc ~T0 @X0 1 a ]
-[; ;spi.c: 176: uint8_t addr = 0;
-[e = _addr -> -> 0 `i `uc ]
-"177
-[v _data `uc ~T0 @X0 1 a ]
-[; ;spi.c: 177: uint8_t data = 0;
-[e = _data -> -> 0 `i `uc ]
-[; ;spi.c: 178: addr = SPI_Exchange8bit(readDummy);
-"178
-[e = _addr ( _SPI_Exchange8bit (1 _readDummy ]
-[; ;spi.c: 179: data = SPI_Exchange8bit(readDummy);
-"179
-[e = _data ( _SPI_Exchange8bit (1 _readDummy ]
-[; ;spi.c: 180: if (addr==0) {
-"180
-[e $ ! == -> _addr `i -> 0 `i 1120  ]
-{
-[; ;spi.c: 181: pwm3 = data;
-"181
-[e = _pwm3 _data ]
-"182
-}
-[; ;spi.c: 182: }
-[e $U 1121  ]
-"183
-[e :U 1120 ]
-[; ;spi.c: 183: else if (addr==1) {
-[e $ ! == -> _addr `i -> 1 `i 1122  ]
-{
-[; ;spi.c: 184: pwm4 = data;
-"184
-[e = _pwm4 _data ]
-"185
-}
 [e :U 1122 ]
-"186
+{
+[e = _LATA4 -> -> 1 `i `b ]
+}
 [e :U 1121 ]
-[; ;spi.c: 185: }
+"176
+[v _readDummy `uc ~T0 @X0 1 a ]
+[; ;spi.c: 176: uint8_t readDummy = 0;
+[e = _readDummy -> -> 0 `i `uc ]
+"177
+[v _addr `uc ~T0 @X0 1 a ]
+[; ;spi.c: 177: uint8_t addr = 0;
+[e = _addr -> -> 0 `i `uc ]
+"178
+[v _data `uc ~T0 @X0 1 a ]
+[; ;spi.c: 178: uint8_t data = 0;
+[e = _data -> -> 0 `i `uc ]
+[; ;spi.c: 179: addr = SPI_Exchange8bit(readDummy);
+"179
+[e = _addr ( _SPI_Exchange8bit (1 _readDummy ]
+[; ;spi.c: 180: data = SPI_Exchange8bit(readDummy);
+"180
+[e = _data ( _SPI_Exchange8bit (1 _readDummy ]
+[; ;spi.c: 181: if (addr==0) {
+"181
+[e $ ! == -> _addr `i -> 0 `i 1123  ]
+{
+[; ;spi.c: 182: pwm3 = data;
+"182
+[e = _pwm3 _data ]
+"183
+}
+[; ;spi.c: 183: }
+[e $U 1124  ]
+"184
+[e :U 1123 ]
+[; ;spi.c: 184: else if (addr==1) {
+[e $ ! == -> _addr `i -> 1 `i 1125  ]
+{
+[; ;spi.c: 185: pwm4 = data;
+"185
+[e = _pwm4 _data ]
+"186
+}
+[e :U 1125 ]
+"188
+[e :U 1124 ]
 [; ;spi.c: 186: }
+[; ;spi.c: 188: do { LATA4 = 0; } while(0);
+[e :U 1128 ]
+{
+[e = _LATA4 -> -> 0 `i `b ]
+}
+[e :U 1127 ]
+[; ;spi.c: 189: }
+"189
 [e :UE 1119 ]
 }
